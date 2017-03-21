@@ -18,6 +18,7 @@
                         <p><?php echo nl2br($post->requires); ?></p>
                         <a href="{{ route('post.edit', $post->id) }}">edit</a>
                         <a href="{{ route('post.delete', $post->id) }}">delete</a>
+                        <a href="{{ route('apply', $post->id) }}">Apply now!</a> 
                     </div>
                 </div>
             </div>

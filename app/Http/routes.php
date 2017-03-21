@@ -21,3 +21,6 @@ Route::get('post/{id}/show', 'PostController@show')->name('post.show');
 Route::get('post/{id}/edit', 'PostController@edit')->name('post.edit');
 Route::post('post/{id}/update', 'PostController@update')->name('post.update');
 Route::get('post/{id}/delete', 'PostController@delete')->name('post.delete');
+
+Route::get('{id}/apply','ApplyController@apply')->name('apply');
+Route::post('apply/store', 'AppliesController@store')->name('apply.store');
