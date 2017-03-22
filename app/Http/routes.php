@@ -23,4 +23,4 @@ Route::post('post/{id}/update', 'PostController@update')->name('post.update');
 Route::get('post/{id}/delete', 'PostController@delete')->name('post.delete');
 
 Route::get('{id}/apply','ApplyController@apply')->name('apply');
-Route::post('apply/store', 'AppliesController@store')->name('apply.store');
+Route::post('apply/store', 'ApplyController@store')->name('apply.store');

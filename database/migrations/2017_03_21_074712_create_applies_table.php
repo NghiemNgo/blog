@@ -15,6 +15,10 @@ class CreateAppliesTable extends Migration
         Schema::create('applies', function(Blueprint $table) {
             $table->increments('id');
             $table->string('cv_url');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('current_address');
             $table->integer('user_id')->unsigned();
             $table->integer('post_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
