@@ -9,6 +9,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Post;
+use App\Model\Category;
+use App\Model\Tag;
 use Validator;
 
 /**
@@ -26,7 +28,8 @@ class PostController extends Controller{
     //put your code here
     public function create()
     {
-        return view('posts.create');
+        $categories = Category::all();
+        return view('posts.create', ['categories' => $categories]);
     }
      /**
      * Store a new user.
@@ -35,9 +38,9 @@ class PostController extends Controller{
      * @return Response
      */
     public function store(Request $request)
-    {
+    {   
         $validator = Validator::make($request->all(), [
-            'title' => 'required|unique:posts|max:255|min:7',
+            'title' => 'required|max:255|min:7',
             'description' => 'required',
             'requires' => 'required',
             'salary' => 'required|numeric'
@@ -48,16 +51,23 @@ class PostController extends Controller{
                         ->withErrors($validator)
                         ->withInput();
         }
+        $listCategories = $request->input('listCategories'); //get list tags categories of post.
+        //save new categories;
+        $this->saveNewCategories($listCategories);
+        
         $post = new Post;
         $post->title = $request->input('title');
         $post->description = $request->input('description');
         $post->requires = $request->input('requires');
         $post->salary = $request->input('salary');
-        $post->save();
-        return redirect()->route('post.show', ['id' => $id]);
-        //$name = $request->input('name');
-
-        //
+        if($post->save())
+        {
+            //save tags;
+            $this->saveTags($listCategories, $post->id);
+            
+            return redirect()->route('post.show', ['id' => $post->id]);
+        }
+        return redirect()->route('post.create');
     }
     public function show($id)
     {
@@ -99,5 +109,33 @@ class PostController extends Controller{
         $post = Post::findOrFail($id);
         $post->delete();
         return redirect()->route('post.index');
+    }
+    
+    public function saveNewCategories($listCategories)
+    {
+        if($listCategories != null){
+            $categories = Category::all()->pluck('name')->toArray(); // get all categories in db 
+            $newCategories = array_diff($listCategories, $categories);// compare two array to get new categories.
+            foreach ($newCategories as $value){
+                $category = new Category;
+                $category->name = $value;
+                $category->save();
+            }
+        }
+        return True;
+    }
+    
+    public function saveTags($listCategories, $post_id)
+    {
+        if($listCategories != null){
+                $categories = Category::all()->pluck('name', 'id')->toArray();
+                foreach($listCategories as $key => $value){
+                    $tag = new Tag;
+                    $tag->post_id = $post_id;
+                    $tag->category_id = array_search($value, $categories);
+                    $tag->save();
+                }
+        }
+        return True;
     }
 }

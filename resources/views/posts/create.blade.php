@@ -1,5 +1,19 @@
 @extends('layouts.app')
-
+<script>
+var i=0;
+function add(){
+    var value = document.getElementById('inputCategories').value;
+    if (value!='') 
+    {   
+        i++;  
+        var title   =document.getElementById('inputCategories').value;
+        var node = document.createElement('div');        
+        node.innerHTML = '<input type="checkbox" id="checkbox' + i + '" name="listCategories[' + i + ']" value=' + title + '><label for="check' + i + '">'+ title +'</label>';       
+        document.getElementById('test').appendChild(node);
+        document.getElementById('inputCategories').value="";
+    }
+}
+</script>
 @section('content')
 <div class="container">
     <div class="row">
@@ -42,7 +56,7 @@
                             <label for="description" class="col-md-2 control-label">Description</label>
 
                             <div class="col-md-8">
-                                <textarea id="content" class="form-control" name="description" rows="10" cols="90" value="{{ old('description') }}"></textarea>
+                                <textarea id="description" class="form-control" name="description" rows="10" cols="90" value="{{ old('description') }}"></textarea>
 
                                 @if ($errors->has('description'))
                                     <span class="help-block">
@@ -64,7 +78,30 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>                        
+                        </div>
+
+                        <div class="form-group{{ $errors->has('categories') ? ' has-error' : '' }}">
+                            <label for="categories" class="col-md-2 control-label">Categories</label>
+
+                            <div class="col-md-8">
+                                <div id="container">
+                                    <input id="inputCategories" type="text" list="listCategories" >
+                                    <input value="add" type="button"  onClick="add()">
+                                    <datalist id="listCategories">
+                                        @foreach($categories as $category)
+                                        <option>{{$category->name}}</option>
+                                        @endforeach
+                                </datalist>
+                                </div>
+                                <div id="test"></div>
+
+                                @if ($errors->has('categories'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('categories') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
