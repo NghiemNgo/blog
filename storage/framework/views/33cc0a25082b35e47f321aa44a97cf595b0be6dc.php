@@ -14,6 +14,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <?php /* <link href="<?php echo e(elixir('css/app.css')); ?>" rel="stylesheet"> */ ?>
+     <link href="<?php echo e(asset('/css/menu.css')); ?>" rel="stylesheet"> 
 
     <style>
         body {
@@ -40,7 +41,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                    RikkeiSoft-Careers
+                    <p class="brand">RikkeiSoft</p>
                 </a>
             </div>
 
@@ -54,12 +55,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     <?php if(Auth::guest()): ?>
-                        <li><a href="<?php echo e(url('/login')); ?>">Login</a></li>
-                        <li><a href="<?php echo e(url('/register')); ?>">Register</a></li>
+                    <li><a class="login" href="<?php echo e(url('/login')); ?>">LOGIN</a></li>
+                    <li><a class="register" href="<?php echo e(url('/register')); ?>">REGISTER</a></li>
                     <?php else: ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
+                                    <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">

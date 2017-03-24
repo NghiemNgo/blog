@@ -12,7 +12,7 @@
                         <div class="panel-heading"><a href="<?php echo e(route('post.show', $post->id)); ?>"><?php echo e($post->title); ?></a></div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-3"><image src= "../images/8489345.png" border="0" class="img-responsive" alt="Null" > </div>
+                                <div class="col-md-3"><image src= "/images/8489345.png" border="0" class="img-responsive" alt="Null" > </div>
                                 <div class="col-md-9">
                                     <div><p><strong>Salary: <?php echo e($post->salary); ?> $</strong><p></div>
                                     <div><p><?php echo e(substr($post->description, 0, 250)); ?>...</p></div>

@@ -12,6 +12,7 @@ use App\Model\Post;
 use App\Model\Category;
 use App\Model\Tag;
 use Validator;
+use DB;
 
 /**
  * Description of PostController
@@ -72,6 +73,8 @@ class PostController extends Controller{
     public function show($id)
     {
         $post = Post::findOrFail($id);
+        $tags = DB::table('tags')->select('category_id')->where('post_id', $id);
+        dd($tags); exit;
         return view('posts.show', ['post' => $post]);
     }
     

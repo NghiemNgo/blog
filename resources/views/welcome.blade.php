@@ -14,7 +14,7 @@
                         <div class="panel-heading"><a href="{{ route('post.show', $post->id) }}">{{$post->title}}</a></div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-3"><image src= "../images/8489345.png" border="0" class="img-responsive" alt="Null" > </div>
+                                <div class="col-md-3"><image src= "/images/8489345.png" border="0" class="img-responsive" alt="Null" > </div>
                                 <div class="col-md-9">
                                     <div><p><strong>Salary: {{$post->salary}} $</strong><p></div>
                                     <div><p>{{ substr($post->description, 0, 250) }}...</p></div>
