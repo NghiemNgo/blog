@@ -1,6 +1,11 @@
 
-.navbar.navbar-default.navbar-static-top {
+nav.header {
     background: url('semi-transparent.png');
+    position: relative;
+    min-height: 50px;
+    border-color: #e7e7e7;
+    margin-bottom: 0px;
+    padding: 12px;
 }
 
 body { 

@@ -1,0 +1,79 @@
+.entry-content::before {
+   content: "";
+   display: block;
+   position: absolute;
+   z-index: -1;
+   width: 100%;
+   height: 100%;
+   background-color: #000000;
+   opacity: 0.5;
+}
+.entry-content {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    
+}
+.section-top-page {
+    position: relative;
+    padding: 0;
+
+}
+
+.wrapper {
+    width: 1170px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 300;
+   
+}
+.blog {
+    color: #fff;
+    text-align: center;
+}
+
+.section-second-page {
+    position: relative;
+    background: #000000 ;
+    background-size: cover;
+    padding: 0;
+    text-align: center;
+
+}
+.section-third-page {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0;
+    
+}
+p.title-products {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #0f1782;
+}
+p.title-about-us {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+.icon-mobile {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+}
+p.icon-mobile {
+    padding: 0;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #0f1782;
+}
+p.content-icon-mobile {
+    color: #54545a;
+}
