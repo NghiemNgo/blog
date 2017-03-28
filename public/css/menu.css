@@ -1,11 +1,57 @@
+@media screen and (max-width: 767px) {
+    
+    nav.header {
+        width: 100%;
+    }
 
+    body {
+	width: 100%;
+        min-height: 100%;
+    }
+    .section-top-page {
+        width: 100%;
+    }
+    .section-top-page-wrapper {
+        width: 50%;
+    }
+    .wrapper {
+        width: 50%;
+    }
+
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    nav.header {
+        width: 100%;
+    }
+
+    body {
+	width: 100%;
+        min-height: 100%;
+    }
+    .section-top-page {
+        width: 100%;
+    }
+    .section-top-page-wrapper {
+        width: 90%;
+    }
+    .wrapper {
+        width: 90%;
+    }
+}
 nav.header {
-    background: url('semi-transparent.png');
-    position: relative;
-    min-height: 50px;
-    border-color: #e7e7e7;
-    margin-bottom: 0px;
-    padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 10000;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+    height: auto;
+    background-color:transparent; 
 }
 
 body { 
@@ -14,16 +60,31 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
+
+}
+body::before {
+   content: "";
+   display: block;
+   position: absolute;
+   z-index: -1;
+   width: 100%;
+   height: 100%;
+   background-color: #000000;
+   opacity: 0.6;
 }
 
-p.brand {
-    font-size: 2rem;
-    color: #272727;
-    font-weight: bold;
+a.navbar-brand {
+    padding: 4px;
 }
 .dropdown-toggle {
     background-color:#222;
     opacity: 0.4;
+}
+a.about-us {
+    font-size: 1.5rem;
+    color: #e0e0e0 !important;
+    font-weight: bold;
 }
 a.login {
     font-size: 1.5rem;
@@ -38,4 +99,11 @@ a.register {
 p.nameUser {
     font-size: 1.5rem;
     font-weight: bold;
+}
+#logo {
+    max-width: 20%;
+    height: auto;
+}
+.active {
+    background-color: #fff;
 }

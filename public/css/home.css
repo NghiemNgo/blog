@@ -1,13 +1,4 @@
-.entry-content::before {
-   content: "";
-   display: block;
-   position: absolute;
-   z-index: -1;
-   width: 100%;
-   height: 100%;
-   background-color: #000000;
-   opacity: 0.5;
-}
+
 .entry-content {
     margin-right: 0;
     margin-left: 0;
@@ -16,34 +7,47 @@
 }
 .section-top-page {
     position: relative;
-    padding: 0;
-
+    padding: 0 0 270px;
+}
+.section-top-page-wrapper {
+    width: 1170px;
+    margin: auto;
+    position: relative;
+    padding-top: 300px;
 }
 
 .wrapper {
     width: 1170px;
     margin: auto;
     position: relative;
-    padding-bottom: 300;
-   
 }
 .blog {
     color: #fff;
     text-align: center;
+    font-weight: bold;
 }
 
 .section-second-page {
     position: relative;
-    background: #000000 ;
+    background: #fff;
     background-size: cover;
-    padding: 0;
+    padding: 100px 0 270px;
     text-align: center;
+}
+.section-page-four {
+    position: relative;
+    background-color: #000000;
+    padding: 100px 0 270px;
+    text-align: center;
+}
 
+.content-about-us {
+    color: #000000;
 }
 .section-third-page {
     background-color: #ffffff;
     color: #000000;
-    padding: 0;
+    padding-bottom: 0;
     
 }
 p.title-products {
@@ -60,7 +64,7 @@ p.title-about-us {
     font-size: 50px;
     text-align: center;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
 }
 .icon-mobile {
     width: 60px;
@@ -76,4 +80,7 @@ p.icon-mobile {
 }
 p.content-icon-mobile {
     color: #54545a;
+}
+.icon-mobile {
+    padding: 0;
 }

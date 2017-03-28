@@ -16,9 +16,21 @@
     <?php /* <link href="<?php echo e(elixir('css/app.css')); ?>" rel="stylesheet"> */ ?>
         <link href="<?php echo e(asset('/css/menu.css')); ?>" rel="stylesheet">
         <link href="<?php echo e(asset('/css/footer.css')); ?>" rel="stylesheet"> 
+    <script>
+        $(function() {
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 50) {
+                $(".header").addClass("active");
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+               $(".header").removeClass("active");
+            }
+        });
+    });​
+    </script>
 </head>
 <body id="app-layout">
-    <nav class="header">
+    <nav class="header" id="header">
         <div class="container">
             <div class="navbar-header">
 
@@ -32,7 +44,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                    <p class="brand">RikkeiSoft</p>
+                    <image id="logo" src="images/logo-rikkei.png"/>
                 </a>
             </div>
 
@@ -44,6 +56,18 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="about-us" href="<?php echo e(url()->route('home')); ?>#about-us">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a class="about-us" href="<?php echo e(url()->route('home')); ?>#our-products">OUR PRODUCTS</a>
+                    </li>
+                    <li>
+                        <a class="about-us" href="">CAREERS</a>
+                    </li>
+                    <li>
+                        <a class="about-us" href="">CONTACT US</a>
+                    </li>
                     <!-- Authentication Links -->
                     <?php if(Auth::guest()): ?>
                     <li><a class="login" href="<?php echo e(url('/login')); ?>">LOGIN</a></li>

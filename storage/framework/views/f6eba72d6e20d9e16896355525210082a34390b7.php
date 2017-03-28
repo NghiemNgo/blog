@@ -2,22 +2,34 @@
 <?php $__env->startSection('content'); ?>
 <div class="entry-content">
     <section class="section-top-page">
-        <div class="wrapper">
+        <div class="section-top-page-wrapper">
             <div class="blog">
                 <h1>We will continue to keep growing in order to become the leading Vietnamese software company.</h1>
                 <h2>We are Rikkeisoft – where the dream begins!</h2>
             </div>
         </div>
     </section>
-    <section class="section-second-page">
-        <div class="wrapper">
-            <p class="title-about-us"><u>About Us</u></p>
-            <div class="blog">
-                <p class="content-about-us">On April 6, 2012, Rikkeisoft was founded in Hanoi, Vietnam by 5 Vietnamese graduates of Ritsumeikan University and Keio University, both located in Japan; the company name is derived from the alma maters of the founders. Rikkeisofts team consists exclusively of graduates from the highest ranking universities in Japan and Vietnam. Next to this, some of our team, including the founders, have a variety of other achievements, such as winning the Mathematical Olympiad and IT Olympics.</p>
+    <section class="section-second-page" id="about-us">
+        <div class="section-second-page-background">
+            <div class="wrapper">
+                <p class="title-about-us"><u>About Us</u></p>
+                <div class="blog">
+                    <p class="content-about-us">On April 6, 2012, Rikkeisoft was founded in Hanoi, Vietnam by 5 Vietnamese graduates of Ritsumeikan University and Keio University, both located in Japan; the company name is derived from the alma maters of the founders. Rikkeisofts team consists exclusively of graduates from the highest ranking universities in Japan and Vietnam. Next to this, some of our team, including the founders, have a variety of other achievements, such as winning the Mathematical Olympiad and IT Olympics.</p>
+                </div>
             </div>
         </div>
     </section>
-    <section class="section-third-page">
+    <section class="section-page-four">
+        <div class="section-page-four-background">
+            <div class="wrapper">
+                <p class="title-about-us"><u>About Us</u></p>
+                <div class="blog">
+                    <p class="content-about-us">On April 6, 2012, Rikkeisoft was founded in Hanoi, Vietnam by 5 Vietnamese graduates of Ritsumeikan University and Keio University, both located in Japan; the company name is derived from the alma maters of the founders. Rikkeisofts team consists exclusively of graduates from the highest ranking universities in Japan and Vietnam. Next to this, some of our team, including the founders, have a variety of other achievements, such as winning the Mathematical Olympiad and IT Olympics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-third-page" id="our-products">
         <div class="wrapper">
             <p class="title-products"><u>Our Products</u></p>
             <div class="row">
