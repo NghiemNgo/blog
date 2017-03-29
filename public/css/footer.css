@@ -1,7 +1,11 @@
 #footer {
-    background-color: #141378;
-}
-.footer-logo-img {
+  background: #002E5B;
+  position: absolute;
+  padding: 0 0 300px;
+  width: 100%;
+  height: auto; }
+  #footer #logo-footer {
     width: 300px;
-    height: 150px;
-}
+    height: auto; }
+
+/*# sourceMappingURL=footer.css.map */

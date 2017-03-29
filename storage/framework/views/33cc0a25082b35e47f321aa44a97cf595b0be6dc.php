@@ -13,24 +13,16 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <?php /* <link href="<?php echo e(elixir('css/app.css')); ?>" rel="stylesheet"> */ ?>
         <link href="<?php echo e(asset('/css/menu.css')); ?>" rel="stylesheet">
         <link href="<?php echo e(asset('/css/footer.css')); ?>" rel="stylesheet"> 
-    <script>
-        $(function() {
-        $(window).on("scroll", function() {
-            if($(window).scrollTop() > 50) {
-                $(".header").addClass("active");
-            } else {
-                //remove the background property so it comes transparent again (defined in your css)
-               $(".header").removeClass("active");
-            }
-        });
-    });​
-    </script>
+        <script type="text/javascript" src="<?php echo e(URL::asset('js/javascript.js')); ?>"></script>
+
 </head>
+
 <body id="app-layout">
-    <nav class="header" id="header">
+    <nav class="header" id="header" role="navigation">
         <div class="container">
             <div class="navbar-header">
 
@@ -60,7 +52,7 @@
                         <a class="about-us" href="<?php echo e(url()->route('home')); ?>#about-us">ABOUT US</a>
                     </li>
                     <li>
-                        <a class="about-us" href="<?php echo e(url()->route('home')); ?>#our-products">OUR PRODUCTS</a>
+                        <a class="about-us" href="<?php echo e(url()->route('home')); ?>#our-products">PRODUCTS</a>
                     </li>
                     <li>
                         <a class="about-us" href="">CAREERS</a>
@@ -89,9 +81,19 @@
     </nav>
 
     <?php echo $__env->yieldContent('content'); ?>
-<footer id="footer">
-
-</footer>
+    <footer id="footer">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
+                        <image id="logo-footer" src="images/logo-rikkei.png"/>
+                    </a>
+                </div>
+                <div class="col-md-4">bb</div>
+                <div class="col-md-4">cc</div>
+            </div>
+        </div>
+    </footer>
     
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>

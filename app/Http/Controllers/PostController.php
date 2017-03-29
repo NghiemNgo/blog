@@ -74,7 +74,6 @@ class PostController extends Controller{
     {
         $post = Post::findOrFail($id);
         $tags = DB::table('tags')->select('category_id')->where('post_id', $id);
-        dd($tags); exit;
         return view('posts.show', ['post' => $post]);
     }
     

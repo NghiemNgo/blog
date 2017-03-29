@@ -3,10 +3,18 @@
     nav.header {
         width: 100%;
     }
+    iframe {
+        width: 80%;
+        height: auto;
 
+    }
     body {
 	width: 100%;
-        min-height: 100%;
+        height: auto;
+    }
+    .entry-content {
+        width: 100%;
+        padding: 0;
     }
     .section-top-page {
         width: 100%;
@@ -15,9 +23,31 @@
         width: 50%;
     }
     .wrapper {
-        width: 50%;
+        width: 100%;
     }
-
+    .navbar-collapse li a {
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        transition: all 0.2s ease-in-out;
+    }
+    .icon-bar {
+        background-color:#FFF !important;
+     }
+    #logo {
+        max-width: 100%;
+        height: auto;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .navbar-header {
+        max-width: 100%;
+        height: auto;
+    }
+    .navbar-brand{
+        max-width: 80%;
+    }
+    
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
@@ -53,7 +83,6 @@ nav.header {
     height: auto;
     background-color:transparent; 
 }
-
 body { 
   background: url(/images/home3.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -75,11 +104,12 @@ body::before {
 }
 
 a.navbar-brand {
-    padding: 4px;
+    padding: 0;
 }
 .dropdown-toggle {
-    background-color:#222;
-    opacity: 0.4;
+    font-size: 1.5rem;
+    color: #e0e0e0 !important;
+    font-weight: bold;
 }
 a.about-us {
     font-size: 1.5rem;
@@ -103,7 +133,18 @@ p.nameUser {
 #logo {
     max-width: 20%;
     height: auto;
+    position: relative;
+    display: inline;
 }
-.active {
-    background-color: #fff;
+.nav-center {
+   position: absolute;
+   margin-left: 47%;    
+}
+.scrolled {
+    background: url(/images/home5.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
 }
