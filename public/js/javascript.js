@@ -13,5 +13,11 @@ $(document).ready(function(){
           $('body').removeClass('scrolled');
       }
     });
+    $('.section-third-page').click(function () {
+    $('iframe.maps').css("pointer-events", "auto");
+    });
+    $( ".section-third-page" ).mouseleave(function() {
+      $('iframe.maps').css("pointer-events", "none"); 
+    });
     
 });

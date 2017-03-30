@@ -7,7 +7,7 @@
 }
 .section-top-page {
     position: relative;
-    padding: 0 0 270px;
+    padding: 0 0 300px;
 }
 .section-top-page-wrapper {
     width: 1170px;
@@ -15,7 +15,12 @@
     position: relative;
     padding-top: 300px;
 }
-
+.wrapper-about-us {
+    width: 1170px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 100px;
+}
 .wrapper {
     width: 1170px;
     margin: auto;
@@ -24,14 +29,13 @@
 .blog {
     color: #fff;
     text-align: center;
-    font-weight: bold;
 }
 
 .section-second-page {
     position: relative;
     background: #fff;
     background-size: cover;
-    padding: 100px 0 400px;
+    padding-bottom: 100px;
     text-align: center;
 }
 .section-page-four {
@@ -41,13 +45,7 @@
 }
 
 .content-about-us {
-    color: #000000;
-}
-.section-third-page {
-    background-color: #ffffff;
-    color: #000000;
-    padding-bottom: 0;
-    
+    color: #002E5B;
 }
 p.title-products {
     padding-top: 30px;
@@ -91,8 +89,14 @@ p.content-icon-mobile {
 .icon-mobile {
     padding: 0;
 }
-iframe {
+iframe.videos {
     width: 80%;
-    height: 60%;
+    height: 80%;
     
+}
+iframe.maps {
+    width: 100%;
+    height: 40%;
+    border: 2px;
+    pointer-events: none;
 }

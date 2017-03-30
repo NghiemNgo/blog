@@ -4,8 +4,40 @@
   padding: 0 0 300px;
   width: 100%;
   height: auto;
+  color: #fff;
+  .footer-wrapper {
+    width: 1170px;
+    margin: 100px;
+    position: relative;
+    .copyright{
+        padding-top: 17px;
+        border-top: 1px solid rgba(204, 204, 204, 0.5);
+    }
+    p.footer-content {
+        padding-top: 30px;
+        font-size: 12px;
+        color: #E7E7E7;
+    }
+    a.footer-link {
+            color: #41A9DA;
+            font-size: 12px;
+    }
+    p.footer-title {
+        font-size: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+    }
+    .material-icons {
+        font-size: 17px;
+        margin: 5px;
+    }
+    a.footer-link {
+        
+    }
+  }
   #logo-footer {
-      width: 300px;
+      width: 50%;
       height: auto;
   }
+  
 }

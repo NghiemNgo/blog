@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/nghiemnv/web/blog/resources/views/home.blade.php</file>
             <file>file:/home/nghiemnv/web/blog/resources/views/layouts/app.blade.php</file>
-            <file>file:/home/nghiemnv/web/blog/resources/views/welcome.blade.php</file>
+            <file>file:/home/nghiemnv/web/blog/public/js/javascript.js</file>
             <file>file:/home/nghiemnv/web/blog/app/Http/Controllers/PostController.php</file>
+            <file>file:/home/nghiemnv/web/blog/public/scss/footer.scss</file>
             <file>file:/home/nghiemnv/web/blog/resources/views/posts/create.blade.php</file>
-            <file>file:/home/nghiemnv/web/blog/resources/views/applies/apply.blade.php</file>
+            <file>file:/home/nghiemnv/web/blog/public/css/home.css</file>
             <file>file:/home/nghiemnv/web/blog/public/css/menu.css</file>
         </group>
     </open-files>

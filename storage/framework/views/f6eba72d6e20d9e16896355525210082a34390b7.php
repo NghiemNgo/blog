@@ -10,28 +10,14 @@
         </div>
     </section>
     <section class="section-second-page" id="about-us">
-        <div class="section-second-page-background">
-            <div class="wrapper">
-                <p class="title-about-us"><u>About Us</u></p>
+            <div class="wrapper-about-us">
+                <p class="title-about-us"><u>ABOUT US</u></p>
                 <div class="blog">
                     <p class="content-about-us">On April 6, 2012, Rikkeisoft was founded in Hanoi, Vietnam by 5 Vietnamese graduates of Ritsumeikan University and Keio University, both located in Japan; the company name is derived from the alma maters of the founders. Rikkeisofts team consists exclusively of graduates from the highest ranking universities in Japan and Vietnam. Next to this, some of our team, including the founders, have a variety of other achievements, such as winning the Mathematical Olympiad and IT Olympics.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section-page-four">
-        <div class="section-page-four-background">
-            <div class="wrapper">
-                <p class="title-achievement-us"><u>ACHIEVEMENT</u></p>
-                <div class="blog">
-                     <iframe width="560" height="315" src="https://www.youtube.com/embed/tYDlF8Q8GE8" frameborder="1" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-third-page" id="our-products">
         <div class="wrapper">
-            <p class="title-products"><u>Products</u></p>
+            <p class="title-products"><u>PRODUCTS</u></p>
             <div class="row">
                 <div class="col-md-3">
                     <div class="row">
@@ -68,6 +54,18 @@
             </div>
         </div>
     </section>
+    <section class="section-page-four">
+            <div class="page-four-wrapper">
+                <p class="title-achievement-us"><u>ACHIEVEMENT</u></p>
+                <div class="blog">
+                     <iframe class="videos" src="https://www.youtube.com/embed/tYDlF8Q8GE8" frameborder="1" allowfullscreen></iframe>
+                </div>
+            </div>
+    </section>
+    <section class="section-third-page">
+        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.4007543694206!2d105.77748695048193!3d21.016644985936278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454ac8f4b0465%3A0xfd5cbbbead5513c0!2sRikkeisoft!5e0!3m2!1sen!2s!4v1490848505822" frameborder="1" allowfullscreen></iframe>
+    </section>
+    
 </div>
 <?php $__env->stopSection(); ?>
 

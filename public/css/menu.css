@@ -1,72 +1,248 @@
-@media screen and (max-width: 767px) {
-    
-    nav.header {
-        width: 100%;
+@media only screen and (max-device-width : 320px){
+    .navbar-collapse {
+        background-color: #002E5B;
     }
-    iframe {
-        width: 80%;
-        height: auto;
-
+    .container {
+        min-width: 100%;
+    }
+    .blog {
+        max-width: 100%;
+    }
+    iframe.videos {
+        max-width: 80%;
     }
     body {
-	width: 100%;
+        min-width: 104%;
         height: auto;
     }
     .entry-content {
-        width: 100%;
-        padding: 0;
+        min-width: 100%;
     }
     .section-top-page {
-        width: 100%;
+        min-width: 100%;
+        height: 120%;
+    }
+    .section-page-four {
+        min-width: 100%;
+        height: 60%;
     }
     .section-top-page-wrapper {
-        width: 50%;
+        width: 80%;
+        padding-top: 50%;
+        padding-bottom: 20%;
     }
     .wrapper {
-        width: 100%;
+        width: 80%;
+    }
+    .wrapper-about-us {
+        width: 80%;
     }
     .navbar-collapse li a {
         -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         transition: all 0.2s ease-in-out;
+        padding-left: 10px; 
+        color: #fff;
     }
     .icon-bar {
         background-color:#FFF !important;
      }
     #logo {
-        max-width: 100%;
+        min-width: 35%;
         height: auto;
         padding-top: 10px;
-        padding-left: 10px;
+        padding-left: 20px;
     }
     .navbar-header {
-        max-width: 100%;
+        min-width: 100%;
         height: auto;
     }
     .navbar-brand{
         max-width: 80%;
     }
+    p.title-achievement-us {
+        font-size: 30px;
+    }
+    p.title-about-us {
+        font-size: 30px;
+    }
+    p.title-products {
+        font-size: 30px;
+    }
+    p.icon-mobile {
+        min-width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .dropdown-toggle {
+        background-color: #002E5B;
+    }
+}
+@media screen and (min-device-width: 321px) and (max-device-width: 767px) {
+    .navbar-collapse {
+        background-color: #002E5B;
+    }
+    .container {
+        min-width: 100%;
+    }
+    .blog {
+        max-width: 100%;
+    }
+    iframe.videos {
+        max-width: 80%;
+    }
+    body {
+        min-width: 104%;
+        height: auto;
+    }
+    .entry-content {
+        min-width: 100%;
+    }
+    .section-top-page {
+        min-width: 100%;
+        height: 120%;
+    }
+    .section-page-four {
+        min-width: 100%;
+        height: 60%;
+    }
+    .section-top-page-wrapper {
+        width: 80%;
+        padding-top: 50%;
+        padding-bottom: 20%;
+    }
+    .wrapper {
+        width: 80%;
+    }
+    .wrapper-about-us {
+        width: 80%;
+    }
+    .navbar-collapse li a {
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        transition: all 0.2s ease-in-out;
+        padding-left: 10px; 
+        color: #fff;
+    }
+    .icon-bar {
+        background-color:#FFF !important;
+     }
+    #logo {
+        min-width: 35%;
+        height: auto;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+    .navbar-header {
+        min-width: 100%;
+        height: auto;
+    }
+    .navbar-brand{
+        max-width: 80%;
+    }
+    p.title-achievement-us {
+        font-size: 30px;
+    }
+    p.title-about-us {
+        font-size: 30px;
+    }
+    p.title-products {
+        font-size: 30px;
+    }
+    p.icon-mobile {
+        min-width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .dropdown-toggle {
+        background-color: #002E5B;
+    }
     
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-
-    nav.header {
-        width: 100%;
+    .container {
+        min-width: 100%;
     }
-
+    .blog {
+        max-width: 100%;
+    }
+    iframe.videos {
+        max-width: 80%;
+    }
     body {
-	width: 100%;
-        min-height: 100%;
+        min-width: 104%;
+        height: auto;
+    }
+    .entry-content {
+        min-width: 100%;
     }
     .section-top-page {
-        width: 100%;
+        min-width: 100%;
+        height: 100%;
+    }
+    .section-page-four {
+        min-width: 100%;
+        height: 60%;
     }
     .section-top-page-wrapper {
-        width: 90%;
+        width: 80%;
+        padding-top: 50%;
+        padding-bottom: 20%;
     }
     .wrapper {
-        width: 90%;
+        width: 80%;
+    }
+    .wrapper-about-us {
+        width: 80%;
+    }
+    .navbar-collapse li a {
+        padding-top: 10px;
+        padding-left: 10px; 
+        color: #fff;
+    }
+    .icon-bar {
+        background-color:#FFF !important;
+     }
+    #logo {
+        min-width: 80%;
+        height: auto;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+    .header {
+        min-width: 100%;
+        min-height: 7%;
+    }
+    .navbar-header {
+        max-width: 20%;
+        height: auto;
+    }
+    .navbar-brand{
+        max-width: 100%;
+        min-height: 100%;
+    }
+    .collapse.navbar-collapse {
+        max-width: 80%;
+        float: right;
+    }
+    p.title-achievement-us {
+        font-size: 30px;
+    }
+    p.title-about-us {
+        font-size: 30px;
+    }
+    p.title-products {
+        font-size: 30px;
+    }
+    p.icon-mobile {
+        min-width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .navbar-right {
+        padding-top: 25px;
     }
 }
 nav.header {
@@ -80,7 +256,7 @@ nav.header {
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     transition: all 0.2s ease-in-out;
-    height: auto;
+    height: 70px;
     background-color:transparent; 
 }
 body { 
@@ -90,7 +266,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   position: relative;
-
+  margin: 0;
 }
 body::before {
    content: "";
@@ -107,9 +283,14 @@ a.navbar-brand {
     padding: 0;
 }
 .dropdown-toggle {
+    /*background-color: #002E5B;*/
     font-size: 1.5rem;
-    color: #e0e0e0 !important;
+    color: #FFF !important;
     font-weight: bold;
+}
+.dropdown-menu {
+    background-color: #002E5B;
+    color: #fff;
 }
 a.about-us {
     font-size: 1.5rem;
