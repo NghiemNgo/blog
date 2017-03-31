@@ -1,14 +1,14 @@
 #footer {
-  background: #002E5B;
-  position: absolute;
-  padding: 0 0 300px;
-  width: 100%;
-  height: auto;
-  color: #fff;
-  .footer-wrapper {
-    width: 1170px;
-    margin: 100px;
-    position: relative;
+    background: #002E5B;
+    top: 0;
+    left: 0;
+    padding:20px 0;
+    color: #fff;
+    .footer-wrapper {
+        width: 1170px;
+        margin: 0 auto;
+        position: relative;
+    }
     .copyright{
         padding-top: 17px;
         border-top: 1px solid rgba(204, 204, 204, 0.5);
@@ -31,10 +31,7 @@
         font-size: 17px;
         margin: 5px;
     }
-    a.footer-link {
-        
-    }
-  }
+ 
   #logo-footer {
       width: 50%;
       height: auto;

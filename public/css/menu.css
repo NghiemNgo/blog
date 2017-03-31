@@ -59,7 +59,7 @@
         height: auto;
     }
     .navbar-brand{
-        max-width: 80%;
+        max-width: 25%;
     }
     p.title-achievement-us {
         font-size: 30px;
@@ -77,6 +77,18 @@
     }
     .dropdown-toggle {
         background-color: #002E5B;
+    }
+    #footer {
+        display: block;
+    }
+    .footer-wrapper {
+        max-width: 80%;
+    }
+    .copyright {
+        max-width: 80%;
+    }
+    .col-md-4 {
+        max-width: 80%;
     }
 }
 @media screen and (min-device-width: 321px) and (max-device-width: 767px) {
@@ -130,7 +142,7 @@
         background-color:#FFF !important;
      }
     #logo {
-        min-width: 35%;
+        min-width: 15%;
         height: auto;
         padding-top: 10px;
         padding-left: 20px;
@@ -140,7 +152,7 @@
         height: auto;
     }
     .navbar-brand{
-        max-width: 80%;
+        max-width: 25%;
     }
     p.title-achievement-us {
         font-size: 30px;
@@ -158,6 +170,18 @@
     }
     .dropdown-toggle {
         background-color: #002E5B;
+    }
+    #footer {
+        display: block;
+    }
+    .footer-wrapper {
+        max-width: 80%;
+    }
+    .copyright {
+        max-width: 80%;
+    }
+    .col-md-4 {
+        max-width: 80%;
     }
     
 }
@@ -208,7 +232,7 @@
     #logo {
         min-width: 80%;
         height: auto;
-        padding-top: 10px;
+        padding-top: 20px;
         padding-left: 20px;
     }
     .header {
@@ -224,7 +248,7 @@
         min-height: 100%;
     }
     .collapse.navbar-collapse {
-        max-width: 80%;
+        min-width: 80%;
         float: right;
     }
     p.title-achievement-us {
@@ -242,7 +266,19 @@
         text-align: center;
     }
     .navbar-right {
-        padding-top: 25px;
+        padding-top: 15px;
+    }
+    #footer {
+        display: block;
+    }
+    .footer-wrapper {
+        max-width: 80%;
+    }
+    .copyright {
+        max-width: 80%;
+    }
+    .col-md-4 {
+        max-width: 80%;
     }
 }
 nav.header {
@@ -258,6 +294,16 @@ nav.header {
     transition: all 0.2s ease-in-out;
     height: 70px;
     background-color:transparent; 
+}
+.navbar-header {
+    width: 10%;
+    padding-top: 5px;
+    float: left;
+}
+.collapse.navbar-collapse {
+    float: right;
+    width: 70%;
+    padding-top: 10px;
 }
 body { 
   background: url(/images/home3.jpg) no-repeat center center fixed; 
@@ -312,7 +358,7 @@ p.nameUser {
     font-weight: bold;
 }
 #logo {
-    max-width: 20%;
+    max-width: 100%;
     height: auto;
     position: relative;
     display: inline;

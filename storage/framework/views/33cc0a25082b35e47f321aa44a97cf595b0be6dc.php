@@ -89,11 +89,14 @@
         <div class="footer-wrapper">
             <div class="row">
                 <div class="col-md-4">
-                    <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
+                    <div class="logo-footer">
+                    <a class="container-logo" href="<?php echo e(url('/')); ?>">
                         <image id="logo-footer" src="images/logo-rikkei.png"/>
-                        <p class="footer-content">Our mission is to enhance people's life by developing high quality software products.</p>
                     </a>
-                    
+                    </div>
+                    <div class="footer-content1">
+                        <p class="footer-content">Our mission is to enhance people's life by developing high quality software products.</p>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <p class="footer-title">CONTACT US</p>
@@ -109,12 +112,10 @@
                     
                         <div class="row">
                                 <div class="col-md-6">
-                                    <ul class="footer-content3">
-                                        <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/">History and Mission<br/><br/><br/></a>      
-                                        <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/why-rikkeisoft/">Why Rikkeisoft<br/><br/><br/></a> 
-                                        <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/news/">News<br/><br/><br/></a>
-                                        <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/testimonials/">Testimonials<br/><br/><br/></a>
-                                    </ul>
+                                    <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/">History and Mission<br/><br/><br/></a>      
+                                    <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/why-rikkeisoft/">Why Rikkeisoft<br/><br/><br/></a> 
+                                    <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/news/">News<br/><br/><br/></a>
+                                    <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/testimonials/">Testimonials<br/><br/><br/></a>
                                 </div>
                                 <div class="col-md-6">
                                     <a class="footer-link" href="http://en.rikkeisoft.com/history-and-mission/">Smartphone Application<br/><br/><br/></a>
