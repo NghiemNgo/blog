@@ -12,7 +12,9 @@
 */
 
 Route::auth();
-
+Route::get('home2', function () {
+    return view('home2');
+});
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('post/create', 'PostController@create')->name('post.create');
 Route::post('post/store', 'PostController@store')->name('post.save');

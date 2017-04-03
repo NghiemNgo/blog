@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 14px;
+  font-family: "Open Sans",Arial,sans-serif;
+  color: #6E6E6E; }
+  body #wrapper {
+    min-height: 100%;
+    position: relative; }
+    body #wrapper #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      z-index: 10000;
+      -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s ease-in-out;
+      height: 70px;
+      background-color: #000000; }
+    body #wrapper #content {
+      background-color: #41A9DA;
+      height: auto;
+      magin: 0 auto; }
+      body #wrapper #content #top-page {
+        width: 100%;
+        padding: 284px 0 250px;
+        position: relative;
+        background-color: #002E5B;
+        text-align: center; }
+        body #wrapper #content #top-page #page-container #top-page-small-title, body #wrapper #content #top-page #header #header-container #top-page-small-title, body #wrapper #header #content #top-page #header-container #top-page-small-title, body #wrapper #content #top-page #footer .footer-wrapper #top-page-small-title, body #wrapper #footer #content #top-page .footer-wrapper #top-page-small-title {
+          font-size: 20px;
+          height: 35px;
+          display: inline-block;
+          text-align: center; }
+        body #wrapper #content #top-page #page-container #top-page-content, body #wrapper #content #top-page #header #header-container #top-page-content, body #wrapper #header #content #top-page #header-container #top-page-content, body #wrapper #content #top-page #footer .footer-wrapper #top-page-content, body #wrapper #footer #content #top-page .footer-wrapper #top-page-content {
+          padding-top: 20px; }
+        body #wrapper #content #top-page #page-container #slogan, body #wrapper #content #top-page #header #header-container #slogan, body #wrapper #header #content #top-page #header-container #slogan, body #wrapper #content #top-page #footer .footer-wrapper #slogan, body #wrapper #footer #content #top-page .footer-wrapper #slogan {
+          padding-top: 45px; }
+      body #wrapper #content #products-page {
+        padding: 100px 0 115px;
+        position: relative;
+        background-color: #000000; }
+        body #wrapper #content #products-page #page-container .products-page-introduce, body #wrapper #content #products-page #header #header-container .products-page-introduce, body #wrapper #header #content #products-page #header-container .products-page-introduce, body #wrapper #content #products-page #footer .footer-wrapper .products-page-introduce, body #wrapper #footer #content #products-page .footer-wrapper .products-page-introduce {
+          padding-right: 30px;
+          padding-top: 40px; }
+        body #wrapper #content #products-page #page-container #products-page-small-title, body #wrapper #content #products-page #header #header-container #products-page-small-title, body #wrapper #header #content #products-page #header-container #products-page-small-title, body #wrapper #content #products-page #footer .footer-wrapper #products-page-small-title, body #wrapper #footer #content #products-page .footer-wrapper #products-page-small-title {
+          border: 2px solid #fff; }
+        body #wrapper #content #products-page #page-container .products-page-icon, body #wrapper #content #products-page #header #header-container .products-page-icon, body #wrapper #header #content #products-page #header-container .products-page-icon, body #wrapper #content #products-page #footer .footer-wrapper .products-page-icon, body #wrapper #footer #content #products-page .footer-wrapper .products-page-icon {
+          float: left;
+          width: 40px;
+          height: 40px; }
+        body #wrapper #content #products-page #page-container p.products-page-icon-title, body #wrapper #content #products-page #header #header-container p.products-page-icon-title, body #wrapper #header #content #products-page #header-container p.products-page-icon-title, body #wrapper #content #products-page #footer .footer-wrapper p.products-page-icon-title, body #wrapper #footer #content #products-page .footer-wrapper p.products-page-icon-title {
+          padding-top: 5px;
+          font-weight: bold;
+          font-size: 14px; }
+        body #wrapper #content #products-page #page-container .products-page-item-header, body #wrapper #content #products-page #header #header-container .products-page-item-header, body #wrapper #header #content #products-page #header-container .products-page-item-header, body #wrapper #content #products-page #footer .footer-wrapper .products-page-item-header, body #wrapper #footer #content #products-page .footer-wrapper .products-page-item-header {
+          padding-bottom: 15px;
+          padding-top: 40px; }
+      body #wrapper #content #news-page {
+        padding: 100px 0 115px;
+        position: relative;
+        background-color: transparent; }
+        body #wrapper #content #news-page #page-container .news-page-header, body #wrapper #content #news-page #header #header-container .news-page-header, body #wrapper #header #content #news-page #header-container .news-page-header, body #wrapper #content #news-page #footer .footer-wrapper .news-page-header, body #wrapper #footer #content #news-page .footer-wrapper .news-page-header {
+          text-align: center; }
+          body #wrapper #content #news-page #page-container .news-page-header #news-page-small-title, body #wrapper #content #news-page #header #header-container .news-page-header #news-page-small-title, body #wrapper #header #content #news-page #header-container .news-page-header #news-page-small-title, body #wrapper #content #news-page #footer .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #footer #content #news-page .footer-wrapper .news-page-header #news-page-small-title {
+            border: 2px solid #000000; }
+        body #wrapper #content #news-page #page-container #news-page-big-title, body #wrapper #content #news-page #header #header-container #news-page-big-title, body #wrapper #header #content #news-page #header-container #news-page-big-title, body #wrapper #content #news-page #footer .footer-wrapper #news-page-big-title, body #wrapper #footer #content #news-page .footer-wrapper #news-page-big-title {
+          padding-bottom: 50px; }
+        body #wrapper #content #news-page #page-container .news-page-item, body #wrapper #content #news-page #header #header-container .news-page-item, body #wrapper #header #content #news-page #header-container .news-page-item, body #wrapper #content #news-page #footer .footer-wrapper .news-page-item, body #wrapper #footer #content #news-page .footer-wrapper .news-page-item {
+          background-color: #fff;
+          padding: 0 30px;
+          border: 1px solid #000000;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px; }
+          body #wrapper #content #news-page #page-container .news-page-item .news-page-item-title, body #wrapper #content #news-page #header #header-container .news-page-item .news-page-item-title, body #wrapper #header #content #news-page #header-container .news-page-item .news-page-item-title, body #wrapper #content #news-page #footer .footer-wrapper .news-page-item .news-page-item-title, body #wrapper #footer #content #news-page .footer-wrapper .news-page-item .news-page-item-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #002E5B; }
+          body #wrapper #content #news-page #page-container .news-page-item .news-page-item-image, body #wrapper #content #news-page #header #header-container .news-page-item .news-page-item-image, body #wrapper #header #content #news-page #header-container .news-page-item .news-page-item-image, body #wrapper #content #news-page #footer .footer-wrapper .news-page-item .news-page-item-image, body #wrapper #footer #content #news-page .footer-wrapper .news-page-item .news-page-item-image {
+            width: 100%;
+            height: auto;
+            padding-top: 10px; }
+        body #wrapper #content #news-page #page-container #big-title, body #wrapper #content #news-page #header #header-container #big-title, body #wrapper #header #content #news-page #header-container #big-title, body #wrapper #content #news-page #footer .footer-wrapper #big-title, body #wrapper #footer #content #news-page .footer-wrapper #big-title, body #wrapper #content #news-page #page-container #news-page-big-title, body #wrapper #content #news-page #header #header-container #news-page-big-title, body #wrapper #header #content #news-page #header-container #news-page-big-title, body #wrapper #content #news-page #footer .footer-wrapper #news-page-big-title, body #wrapper #footer #content #news-page .footer-wrapper #news-page-big-title, body #wrapper #content #news-page #about-us #page-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #news-page #page-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #page-container .about-us-content #news-page #header #header-container #about-us-big-title, body #wrapper #header #content #about-us #page-container .about-us-content #news-page #header-container #about-us-big-title, body #wrapper #content #about-us #page-container .about-us-content #news-page #footer .footer-wrapper #about-us-big-title, body #wrapper #footer #content #about-us #page-container .about-us-content #news-page .footer-wrapper #about-us-big-title, body #wrapper #content #about-us #header #header-container .about-us-content #news-page #page-container #about-us-big-title, body #wrapper #content #news-page #about-us #header #header-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #news-page #header #header-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #header #header-container .about-us-content #news-page #footer .footer-wrapper #about-us-big-title, body #wrapper #footer #content #about-us #header #header-container .about-us-content #news-page .footer-wrapper #about-us-big-title, body #wrapper #header #content #about-us #header-container .about-us-content #news-page #page-container #about-us-big-title, body #wrapper #content #news-page #header #content #about-us #header-container .about-us-content #about-us-big-title, body #wrapper #header #content #news-page #about-us #header-container .about-us-content #about-us-big-title, body #wrapper #header #content #about-us #news-page #header-container .about-us-content #about-us-big-title, body #wrapper #header #content #about-us #header-container .about-us-content #news-page #footer .footer-wrapper #about-us-big-title, body #wrapper #footer #header #content #about-us #header-container .about-us-content #news-page .footer-wrapper #about-us-big-title, body #wrapper #header #footer #content #about-us #header-container .about-us-content #news-page .footer-wrapper #about-us-big-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-content #news-page #page-container #about-us-big-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-content #news-page #header #header-container #about-us-big-title, body #wrapper #header #content #about-us #footer .footer-wrapper .about-us-content #news-page #header-container #about-us-big-title, body #wrapper #content #news-page #about-us #footer .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #content #about-us #news-page #footer .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-content #news-page #page-container #about-us-big-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-content #news-page #header #header-container #about-us-big-title, body #wrapper #header #footer #content #about-us .footer-wrapper .about-us-content #news-page #header-container #about-us-big-title, body #wrapper #footer #header #content #about-us .footer-wrapper .about-us-content #news-page #header-container #about-us-big-title, body #wrapper #content #news-page #footer #content #about-us .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #news-page #about-us .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #about-us #news-page .footer-wrapper .about-us-content #about-us-big-title {
+          padding-top: 30px;
+          padding-bottom: 60px;
+          text-align: center; }
+      body #wrapper #content #about-us {
+        padding: 100px 0 115px;
+        position: relative;
+        background-color: #000000;
+        text-align: center; }
+        body #wrapper #content #about-us #page-container .about-us-header #about-us-small-title, body #wrapper #content #about-us #header #header-container .about-us-header #about-us-small-title, body #wrapper #header #content #about-us #header-container .about-us-header #about-us-small-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-header #about-us-small-title {
+          border: 2px solid #fff; }
+        body #wrapper #content #about-us #page-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #header #header-container .about-us-content #about-us-big-title, body #wrapper #header #content #about-us #header-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-content #about-us-big-title {
+          padding-top: 30px;
+          padding-bottom: 50px; }
+      body #wrapper #content #recruit {
+        padding: 100px 0 115px;
+        position: relative;
+        background-color: #fff;
+        text-align: center; }
+        body #wrapper #content #recruit #page-container .recruit-header #recruit-small-title, body #wrapper #content #recruit #header #header-container .recruit-header #recruit-small-title, body #wrapper #header #content #recruit #header-container .recruit-header #recruit-small-title, body #wrapper #content #recruit #footer .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #footer #content #recruit .footer-wrapper .recruit-header #recruit-small-title {
+          border: 2px solid #000000; }
+        body #wrapper #content #recruit #page-container .recruit-content, body #wrapper #content #recruit #header #header-container .recruit-content, body #wrapper #header #content #recruit #header-container .recruit-content, body #wrapper #content #recruit #footer .footer-wrapper .recruit-content, body #wrapper #footer #content #recruit .footer-wrapper .recruit-content {
+          padding-top: 30px; }
+        body #wrapper #content #recruit #page-container .btn-secondary, body #wrapper #content #recruit #header #header-container .btn-secondary, body #wrapper #header #content #recruit #header-container .btn-secondary, body #wrapper #content #recruit #footer .footer-wrapper .btn-secondary, body #wrapper #footer #content #recruit .footer-wrapper .btn-secondary {
+          color: #fff;
+          background-color: #E94820;
+          width: 250px;
+          height: 50px;
+          margin-top: 50px;
+          font-size: 14px;
+          height: 35px;
+          padding: 0 40px;
+          font-weight: 700;
+          line-height: 28px; }
+      body #wrapper #content #workplade {
+        padding: 100px 0 115px;
+        position: relative;
+        background-color: #000000;
+        text-align: center; }
+        body #wrapper #content #workplade #page-container .workplade-header #workplade-small-title, body #wrapper #content #workplade #header #header-container .workplade-header #workplade-small-title, body #wrapper #header #content #workplade #header-container .workplade-header #workplade-small-title, body #wrapper #content #workplade #footer .footer-wrapper .workplade-header #workplade-small-title, body #wrapper #footer #content #workplade .footer-wrapper .workplade-header #workplade-small-title {
+          border: 2px solid #fff; }
+    body #wrapper #footer {
+      background: #002E5B;
+      width: 100%;
+      position: relative;
+      height: auto;
+      color: #fff; }
+      body #wrapper #footer .footer-wrapper {
+        padding-top: 100px; }
+      body #wrapper #footer .copyright {
+        padding-top: 17px;
+        border-top: 1px solid rgba(204, 204, 204, 0.5); }
+      body #wrapper #footer p.footer-content {
+        padding-top: 30px;
+        font-size: 12px;
+        color: #E7E7E7; }
+      body #wrapper #footer a.footer-link {
+        color: #41A9DA;
+        font-size: 12px; }
+      body #wrapper #footer p.footer-title {
+        font-size: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5); }
+      body #wrapper #footer .material-icons {
+        font-size: 17px;
+        margin: 5px; }
+      body #wrapper #footer #logo-footer {
+        width: 50%;
+        height: auto; }
+
+#page-container, body #wrapper #header #header-container, body #wrapper #footer .footer-wrapper {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 20px; }
+  #page-container #big-title, body #wrapper #header #header-container #big-title, body #wrapper #footer .footer-wrapper #big-title, body #wrapper #content #news-page #page-container #news-page-big-title, body #wrapper #content #news-page #header #header-container #news-page-big-title, body #wrapper #header #content #news-page #header-container #news-page-big-title, body #wrapper #content #news-page #footer .footer-wrapper #news-page-big-title, body #wrapper #footer #content #news-page .footer-wrapper #news-page-big-title, body #wrapper #content #about-us #page-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #header #header-container .about-us-content #about-us-big-title, body #wrapper #header #content #about-us #header-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-content #about-us-big-title {
+    font-size: 36px;
+    word-wrap: break-word; }
+  #page-container #small-title, body #wrapper #header #header-container #small-title, body #wrapper #footer .footer-wrapper #small-title, body #wrapper #content #products-page #page-container #products-page-small-title, body #wrapper #content #products-page #header #header-container #products-page-small-title, body #wrapper #header #content #products-page #header-container #products-page-small-title, body #wrapper #content #products-page #footer .footer-wrapper #products-page-small-title, body #wrapper #footer #content #products-page .footer-wrapper #products-page-small-title, body #wrapper #content #news-page #page-container .news-page-header #news-page-small-title, body #wrapper #content #news-page #header #header-container .news-page-header #news-page-small-title, body #wrapper #header #content #news-page #header-container .news-page-header #news-page-small-title, body #wrapper #content #news-page #footer .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #footer #content #news-page .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #content #about-us #page-container .about-us-header #about-us-small-title, body #wrapper #content #about-us #header #header-container .about-us-header #about-us-small-title, body #wrapper #header #content #about-us #header-container .about-us-header #about-us-small-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #content #recruit #page-container .recruit-header #recruit-small-title, body #wrapper #content #recruit #header #header-container .recruit-header #recruit-small-title, body #wrapper #header #content #recruit #header-container .recruit-header #recruit-small-title, body #wrapper #content #recruit #footer .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #footer #content #recruit .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #content #workplade #page-container .workplade-header #workplade-small-title, body #wrapper #content #workplade #header #header-container .workplade-header #workplade-small-title, body #wrapper #header #content #workplade #header-container .workplade-header #workplade-small-title, body #wrapper #content #workplade #footer .footer-wrapper .workplade-header #workplade-small-title, body #wrapper #footer #content #workplade .footer-wrapper .workplade-header #workplade-small-title {
+    font-size: 14px;
+    height: 35px;
+    display: inline-block;
+    padding: 0 40px;
+    font-weight: 700;
+    line-height: 28px; }
+  #page-container #item-content, body #wrapper #header #header-container #item-content, body #wrapper #footer .footer-wrapper #item-content, body #wrapper #content #products-page #page-container .products-page-introduce #products-page-content, body #wrapper #content #products-page #header #header-container .products-page-introduce #products-page-content, body #wrapper #header #content #products-page #header-container .products-page-introduce #products-page-content, body #wrapper #content #products-page #footer .footer-wrapper .products-page-introduce #products-page-content, body #wrapper #footer #content #products-page .footer-wrapper .products-page-introduce #products-page-content, body #wrapper #content #news-page #page-container .news-page-item .news-page-item-content, body #wrapper #content #news-page #header #header-container .news-page-item .news-page-item-content, body #wrapper #header #content #news-page #header-container .news-page-item .news-page-item-content, body #wrapper #content #news-page #footer .footer-wrapper .news-page-item .news-page-item-content, body #wrapper #footer #content #news-page .footer-wrapper .news-page-item .news-page-item-content {
+    font-size: 14px;
+    font-family: "Open Sans",Arial,sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+/*# sourceMappingURL=index.css.map */
