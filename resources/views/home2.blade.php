@@ -138,7 +138,25 @@
                 <p id="workplade-small-title">WORKPLACE</p>
             </div>
             <div class="workplade-content">
-                
+                <div class="acc">
+                    <ul>
+                      <li>
+                        <img src="http://blogs-images.forbes.com/carolpinchefsky/files/2012/10/Skyfall.jpg">
+                      </li>
+                      <li>
+                        <img src="http://www.fymplanet.com/wp-content/uploads/2013/05/Star-Trek.jpg">
+                      </li>
+                      <li>
+                        <img src="http://p1.pichost.me/i/17/1400512.jpg">
+                      </li>
+                      <li>
+                        <img src="http://risensources.com/wp-content/uploads/2011/05/Risensources-transformer-5.jpg">
+                      </li>
+                      <li>
+                        <img src="http://farm8.staticflickr.com/7435/10067483716_2b6a593ca8.jpg">
+                      </li>
+                    </ul>
+                  </div>
             </div>
         </div>
     </div>

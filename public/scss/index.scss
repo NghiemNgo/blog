@@ -21,8 +21,29 @@ body {
             transition: all 0.2s ease-in-out;
             height: 70px;
             background-color:#000000; 
-            #header-container {
-                @extend #page-container;
+            .nav-header {
+                .container {
+                    .navbar-header {
+                        float: left;
+                        width: 25%;
+                        height: 100%;
+                        a.navbar-brand {
+                            width: 100%;
+                            height: 100%;
+                            padding-top: 10px;
+                            #logo {
+                                max-width: 40%;
+                                height: auto;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                    .collapse.navbar-collapse {
+                        width: 75%;
+                        float: right;
+                        padding-top: 10px;
+                    }
+                }
             }
         }
         #content {
@@ -196,10 +217,35 @@ body {
                             border: 2px solid #fff;
                         }
                     }
+                    .workplade-content {
+                        width: 100%;
+                        .acc{
+                            width: 960px;
+                            height: 300px;
+                            overflow:hidden;
+
+                            margin: 30px auto;
+                            box-shadow: 0 8px 6px -6px black;
+                        }
+                        .acc li{
+                            display:block;
+                            width:20%;
+                            float: left;
+                            box-shadow: 0 0 20px 10px rgba(0,0,0,0.6);
+                            transition: all 0.75s;
+                        }
+                        .acc ul:hover li{
+                            width: 10%;
+                        }
+                        .acc ul li:hover{
+                            width:60%;
+                        }
+                        img {
+                            width:590px;
+                        }
+                    }
                 }
-                .workplade-content {
-                    
-                }
+                
             }
         }
         #footer {
@@ -266,4 +312,8 @@ body {
         padding-bottom: 10px;
     }
  }
+ 
+
+
+
  
