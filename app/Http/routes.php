@@ -29,3 +29,8 @@ Route::get('post/{id}/delete', 'PostController@delete')->name('post.delete');
 
 Route::get('{id}/apply','ApplyController@apply')->name('apply');
 Route::post('apply/store', 'ApplyController@store')->name('apply.store');
+
+//homeCategories
+Route::get('home/items', 'HomeCategoryController@index')->name('home.items');
+//Route::post('home/create', 'HomeCategoryController@create')->name('home.create');
+Route::post('home/store', 'HomeContentController@store')->name('home.create');

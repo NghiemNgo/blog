@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 <script>
 var i=0;
 function add(){
@@ -15,7 +15,9 @@ function add(){
 }
 </script>
 @section('content')
-<div class="container">
+<div id="content">
+    <div id="post-create">
+        <div id="page-container">
     <div class="row">
         <div class="col-md-10 col-md-offset-2">
             <div class="panel panel-default">
@@ -113,6 +115,8 @@ function add(){
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 </div>
 @endsection

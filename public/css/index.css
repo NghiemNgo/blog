@@ -27,11 +27,10 @@ body {
         height: 100%; }
         body #wrapper #header .nav-header .container .navbar-header a.navbar-brand {
           width: 100%;
-          height: 100%;
-          padding-top: 10px; }
+          height: 100%; }
           body #wrapper #header .nav-header .container .navbar-header a.navbar-brand #logo {
-            max-width: 40%;
-            height: auto;
+            min-width: 90px;
+            height: 50px;
             margin: 0 auto; }
       body #wrapper #header .nav-header .container .collapse.navbar-collapse {
         width: 75%;
@@ -39,6 +38,7 @@ body {
         padding-top: 10px; }
     body #wrapper #content {
       background-color: #41A9DA;
+      min-height: 100% !important;
       height: auto;
       magin: 0 auto; }
       body #wrapper #content #top-page {
@@ -138,38 +138,224 @@ body {
           padding: 0 40px;
           font-weight: 700;
           line-height: 28px; }
-      body #wrapper #content #workplade {
+      body #wrapper #content #workplace {
         padding: 100px 0 115px;
         position: relative;
         background-color: #000000;
         text-align: center; }
-        body #wrapper #content #workplade #page-container .workplade-header #workplade-small-title, body #wrapper #content #workplade #footer .footer-wrapper .workplade-header #workplade-small-title, body #wrapper #footer #content #workplade .footer-wrapper .workplade-header #workplade-small-title {
+        body #wrapper #content #workplace #page-container .workplace-header #workplace-small-title, body #wrapper #content #workplace #footer .footer-wrapper .workplace-header #workplace-small-title, body #wrapper #footer #content #workplace .footer-wrapper .workplace-header #workplace-small-title {
           border: 2px solid #fff; }
-        body #wrapper #content #workplade #page-container .workplade-content, body #wrapper #content #workplade #footer .footer-wrapper .workplade-content, body #wrapper #footer #content #workplade .footer-wrapper .workplade-content {
+        body #wrapper #content #workplace #page-container .workplace-content .acc, body #wrapper #content #workplace #footer .footer-wrapper .workplace-content .acc, body #wrapper #footer #content #workplace .footer-wrapper .workplace-content .acc {
+          width: 100%;
+          overflow: hidden;
+          margin: 30px auto;
+          box-shadow: 0 8px 6px -6px black; }
+        body #wrapper #content #workplace #page-container .workplace-content .acc li, body #wrapper #content #workplace #footer .footer-wrapper .workplace-content .acc li, body #wrapper #footer #content #workplace .footer-wrapper .workplace-content .acc li {
+          float: left;
+          display: block;
+          width: 20%;
+          float: left;
+          box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.6);
+          transition: all 0.75s; }
+        body #wrapper #content #workplace #page-container .workplace-content .acc ul:hover li, body #wrapper #content #workplace #footer .footer-wrapper .workplace-content .acc ul:hover li, body #wrapper #footer #content #workplace .footer-wrapper .workplace-content .acc ul:hover li {
+          width: 10%; }
+        body #wrapper #content #workplace #page-container .workplace-content .acc ul li:hover, body #wrapper #content #workplace #footer .footer-wrapper .workplace-content .acc ul li:hover, body #wrapper #footer #content #workplace .footer-wrapper .workplace-content .acc ul li:hover {
+          width: 50%; }
+        body #wrapper #content #workplace #page-container .workplace-content img.workplace-image, body #wrapper #content #workplace #footer .footer-wrapper .workplace-content img.workplace-image, body #wrapper #footer #content #workplace .footer-wrapper .workplace-content img.workplace-image {
+          width: 590px; }
+      body #wrapper #content #customer {
+        padding: 100px 0 115px;
+        position: relative;
+        background-color: #fff;
+        text-align: center; }
+        body #wrapper #content #customer #page-container .customer-header #customer-small-title, body #wrapper #content #customer #footer .footer-wrapper .customer-header #customer-small-title, body #wrapper #footer #content #customer .footer-wrapper .customer-header #customer-small-title {
+          border: 2px solid #000000; }
+        body #wrapper #content #customer #page-container .customer-content, body #wrapper #content #customer #footer .footer-wrapper .customer-content, body #wrapper #footer #content #customer .footer-wrapper .customer-content {
           width: 100%; }
-          body #wrapper #content #workplade #page-container .workplade-content .acc, body #wrapper #content #workplade #footer .footer-wrapper .workplade-content .acc, body #wrapper #footer #content #workplade .footer-wrapper .workplade-content .acc {
-            width: 960px;
-            height: 300px;
-            overflow: hidden;
-            margin: 30px auto;
-            box-shadow: 0 8px 6px -6px black; }
-          body #wrapper #content #workplade #page-container .workplade-content .acc li, body #wrapper #content #workplade #footer .footer-wrapper .workplade-content .acc li, body #wrapper #footer #content #workplade .footer-wrapper .workplade-content .acc li {
+          body #wrapper #content #customer #page-container .customer-content .Marquee, body #wrapper #content #customer #footer .footer-wrapper .customer-content .Marquee, body #wrapper #footer #content #customer .footer-wrapper .customer-content .Marquee {
+            /*background: linear-gradient(-135deg, #008ed9, #8b00db);*/
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1em;
+            color: #fff;
+            font-weight: 200;
+            display: flex;
+            align-items: center;
+            overflow: hidden; }
+          body #wrapper #content #customer #page-container .customer-content .Marquee-content, body #wrapper #content #customer #footer .footer-wrapper .customer-content .Marquee-content, body #wrapper #footer #content #customer .footer-wrapper .customer-content .Marquee-content {
+            display: flex;
+            animation: marquee 50s linear infinite running; }
+          body #wrapper #content #customer #page-container .customer-content .Marquee-content:hover, body #wrapper #content #customer #footer .footer-wrapper .customer-content .Marquee-content:hover, body #wrapper #footer #content #customer .footer-wrapper .customer-content .Marquee-content:hover {
+            animation-play-state: paused; }
+          body #wrapper #content #customer #page-container .customer-content .Marquee-tag, body #wrapper #content #customer #footer .footer-wrapper .customer-content .Marquee-tag, body #wrapper #footer #content #customer .footer-wrapper .customer-content .Marquee-tag {
+            width: 400px;
+            margin: 0 0.5em;
+            padding: 0.5em;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease; }
+          body #wrapper #content #customer #page-container .customer-content .Marquee-tag:hover, body #wrapper #content #customer #footer .footer-wrapper .customer-content .Marquee-tag:hover, body #wrapper #footer #content #customer .footer-wrapper .customer-content .Marquee-tag:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+            cursor: pointer; }
+          body #wrapper #content #customer #page-container .customer-content img.customer-image, body #wrapper #content #customer #footer .footer-wrapper .customer-content img.customer-image, body #wrapper #footer #content #customer .footer-wrapper .customer-content img.customer-image {
+            width: 100%;
+            height: auto; }
+@-moz-keyframes marquee {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translate(-50%); } }
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translate(-50%); } }
+@-o-keyframes marquee {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translate(-50%); } }
+@keyframes marquee {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translate(-50%); } }
+      body #wrapper #content #home-items {
+        position: relative;
+        padding-top: 100px;
+        height: 2600px; }
+        body #wrapper #content #home-items #page-container, body #wrapper #content #home-items #footer .footer-wrapper, body #wrapper #footer #content #home-items .footer-wrapper {
+          /* Container used for styling the custom select, the buttom class adds the bg gradient, corners, etc. */
+          /* This is the native select, we're making everything the text invisible so we can see the button styles in the wrapper */
+          /* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select */
+          /* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
+          /* Hover style */
+          /* Focus style */
+          /* Firefox focus has odd artifacts around the text, this kills that */
+          /* These are just demo button-y styles, style as you like */ }
+          body #wrapper #content #home-items #page-container label, body #wrapper #content #home-items #footer .footer-wrapper label, body #wrapper #footer #content #home-items .footer-wrapper label {
             display: block;
-            width: 20%;
-            float: left;
-            box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.6);
-            transition: all 0.75s; }
-          body #wrapper #content #workplade #page-container .workplade-content .acc ul:hover li, body #wrapper #content #workplade #footer .footer-wrapper .workplade-content .acc ul:hover li, body #wrapper #footer #content #workplade .footer-wrapper .workplade-content .acc ul:hover li {
-            width: 10%; }
-          body #wrapper #content #workplade #page-container .workplade-content .acc ul li:hover, body #wrapper #content #workplade #footer .footer-wrapper .workplade-content .acc ul li:hover, body #wrapper #footer #content #workplade .footer-wrapper .workplade-content .acc ul li:hover {
-            width: 60%; }
-          body #wrapper #content #workplade #page-container .workplade-content img, body #wrapper #content #workplade #footer .footer-wrapper .workplade-content img, body #wrapper #footer #content #workplade .footer-wrapper .workplade-content img {
-            width: 590px; }
+            font-size: 1.25em;
+            color: #333; }
+          body #wrapper #content #home-items #page-container .dropdown, body #wrapper #content #home-items #footer .footer-wrapper .dropdown, body #wrapper #footer #content #home-items .footer-wrapper .dropdown {
+            position: relative;
+            display: block;
+            padding: 0; }
+          body #wrapper #content #home-items #page-container .dropdown select, body #wrapper #content #home-items #footer .footer-wrapper .dropdown select, body #wrapper #footer #content #home-items .footer-wrapper .dropdown select {
+            width: 100%;
+            margin: 0;
+            background: none;
+            border: 1px solid transparent;
+            outline: none;
+            /* Prefixed box-sizing rules necessary for older browsers */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            /* Remove select styling */
+            appearance: none;
+            -webkit-appearance: none;
+            /* Magic font size number to prevent iOS text zoom */
+            font-size: 1.25em;
+            /* General select styles: change as needed */
+            /* font-weight: bold; */
+            color: #444;
+            padding: .6em 1.9em .5em .8em;
+            line-height: 1.3; }
+          body #wrapper #content #home-items #page-container .dropdown select, body #wrapper #content #home-items #footer .footer-wrapper .dropdown select, body #wrapper #footer #content #home-items .footer-wrapper .dropdown select,
+          body #wrapper #content #home-items #page-container label,
+          body #wrapper #content #home-items #footer .footer-wrapper label,
+          body #wrapper #footer #content #home-items .footer-wrapper label {
+            font-family: AvenirNextCondensed-DemiBold, Corbel, "Lucida Grande","Trebuchet Ms", sans-serif; }
+          body #wrapper #content #home-items #page-container .dropdown::after, body #wrapper #content #home-items #footer .footer-wrapper .dropdown::after, body #wrapper #footer #content #home-items .footer-wrapper .dropdown::after {
+            content: "";
+            position: absolute;
+            width: 9px;
+            height: 8px;
+            top: 50%;
+            right: 1em;
+            margin-top: -4px;
+            z-index: 2;
+            background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(102,102,102)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat;
+            /* These hacks make the select behind the arrow clickable in some browsers */
+            pointer-events: none; }
+          @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            body #wrapper #content #home-items #page-container, body #wrapper #content #home-items #footer .footer-wrapper, body #wrapper #footer #content #home-items .footer-wrapper {
+              /* Removes the odd blue bg color behind the text in IE 10/11 and sets the text to match the focus style text */ }
+              body #wrapper #content #home-items #page-container .dropdown select::-ms-expand, body #wrapper #content #home-items #footer .footer-wrapper .dropdown select::-ms-expand, body #wrapper #footer #content #home-items .footer-wrapper .dropdown select::-ms-expand {
+                display: none; }
+              body #wrapper #content #home-items #page-container select:focus::-ms-value, body #wrapper #content #home-items #footer .footer-wrapper select:focus::-ms-value, body #wrapper #footer #content #home-items .footer-wrapper select:focus::-ms-value {
+                background: transparent;
+                color: #222; } }
+          body #wrapper #content #home-items #page-container .dropdown:hover, body #wrapper #content #home-items #footer .footer-wrapper .dropdown:hover, body #wrapper #footer #content #home-items .footer-wrapper .dropdown:hover {
+            border: 1px solid #888; }
+          body #wrapper #content #home-items #page-container select:focus, body #wrapper #content #home-items #footer .footer-wrapper select:focus, body #wrapper #footer #content #home-items .footer-wrapper select:focus {
+            outline: none;
+            box-shadow: 0 0 1px 3px #b4defa;
+            background-color: transparent;
+            color: #222;
+            border: 1px solid #aaa; }
+          body #wrapper #content #home-items #page-container select:-moz-focusring, body #wrapper #content #home-items #footer .footer-wrapper select:-moz-focusring, body #wrapper #footer #content #home-items .footer-wrapper select:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000; }
+          body #wrapper #content #home-items #page-container option, body #wrapper #content #home-items #footer .footer-wrapper option, body #wrapper #footer #content #home-items .footer-wrapper option {
+            font-weight: normal; }
+          body #wrapper #content #home-items #page-container .button, body #wrapper #content #home-items #footer .footer-wrapper .button, body #wrapper #footer #content #home-items .footer-wrapper .button {
+            border: 1px solid #bbb;
+            border-radius: .3em;
+            box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+            background: #f3f3f3;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+            /* W3C */ }
+          body #wrapper #content #home-items #page-container .output, body #wrapper #content #home-items #footer .footer-wrapper .output, body #wrapper #footer #content #home-items .footer-wrapper .output {
+            padding-top: 50px; }
+            body #wrapper #content #home-items #page-container .output #news-page, body #wrapper #content #home-items #footer .footer-wrapper .output #news-page, body #wrapper #footer #content #home-items .footer-wrapper .output #news-page {
+              color: #000000; }
+            body #wrapper #content #home-items #page-container .output #recruit, body #wrapper #content #home-items #footer .footer-wrapper .output #recruit, body #wrapper #footer #content #home-items .footer-wrapper .output #recruit {
+              color: #000000; }
+            body #wrapper #content #home-items #page-container .output #customer, body #wrapper #content #home-items #footer .footer-wrapper .output #customer, body #wrapper #footer #content #home-items .footer-wrapper .output #customer {
+              color: #000000; }
+          body #wrapper #content #home-items #page-container .items, body #wrapper #content #home-items #footer .footer-wrapper .items, body #wrapper #footer #content #home-items .footer-wrapper .items {
+            padding: 2em;
+            color: #fff;
+            display: none; }
+            body #wrapper #content #home-items #page-container .items .panel-body, body #wrapper #content #home-items #footer .footer-wrapper .items .panel-body, body #wrapper #footer #content #home-items .footer-wrapper .items .panel-body {
+              background-color: #fff;
+              width: 100%; }
+          body #wrapper #content #home-items #page-container button, body #wrapper #content #home-items #footer .footer-wrapper button, body #wrapper #footer #content #home-items .footer-wrapper button {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-weight: 700;
+            font-size: 14px;
+            font-family: "Open Sans",Arial,sans-serif;
+            color: #fff;
+            width: 80%;
+            float: right; }
+      body #wrapper #content #post-create {
+        position: relative;
+        padding-top: 100px;
+        height: 1500px; }
     body #wrapper #footer {
       background: #002E5B;
       width: 100%;
-      position: relative;
-      height: auto;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
       color: #fff; }
       body #wrapper #footer .footer-wrapper {
         padding-top: 100px; }
@@ -202,7 +388,7 @@ body {
   #page-container #big-title, body #wrapper #footer .footer-wrapper #big-title, body #wrapper #content #news-page #page-container #news-page-big-title, body #wrapper #content #news-page #footer .footer-wrapper #news-page-big-title, body #wrapper #footer #content #news-page .footer-wrapper #news-page-big-title, body #wrapper #content #about-us #page-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-content #about-us-big-title {
     font-size: 36px;
     word-wrap: break-word; }
-  #page-container #small-title, body #wrapper #footer .footer-wrapper #small-title, body #wrapper #content #products-page #page-container #products-page-small-title, body #wrapper #content #products-page #footer .footer-wrapper #products-page-small-title, body #wrapper #footer #content #products-page .footer-wrapper #products-page-small-title, body #wrapper #content #news-page #page-container .news-page-header #news-page-small-title, body #wrapper #content #news-page #footer .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #footer #content #news-page .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #content #about-us #page-container .about-us-header #about-us-small-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #content #recruit #page-container .recruit-header #recruit-small-title, body #wrapper #content #recruit #footer .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #footer #content #recruit .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #content #workplade #page-container .workplade-header #workplade-small-title, body #wrapper #content #workplade #footer .footer-wrapper .workplade-header #workplade-small-title, body #wrapper #footer #content #workplade .footer-wrapper .workplade-header #workplade-small-title {
+  #page-container #small-title, body #wrapper #footer .footer-wrapper #small-title, body #wrapper #content #products-page #page-container #products-page-small-title, body #wrapper #content #products-page #footer .footer-wrapper #products-page-small-title, body #wrapper #footer #content #products-page .footer-wrapper #products-page-small-title, body #wrapper #content #news-page #page-container .news-page-header #news-page-small-title, body #wrapper #content #news-page #footer .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #footer #content #news-page .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #content #about-us #page-container .about-us-header #about-us-small-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #content #recruit #page-container .recruit-header #recruit-small-title, body #wrapper #content #recruit #footer .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #footer #content #recruit .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #content #workplace #page-container .workplace-header #workplace-small-title, body #wrapper #content #workplace #footer .footer-wrapper .workplace-header #workplace-small-title, body #wrapper #footer #content #workplace .footer-wrapper .workplace-header #workplace-small-title, body #wrapper #content #customer #page-container .customer-header #customer-small-title, body #wrapper #content #customer #footer .footer-wrapper .customer-header #customer-small-title, body #wrapper #footer #content #customer .footer-wrapper .customer-header #customer-small-title {
     font-size: 14px;
     height: 35px;
     display: inline-block;
@@ -214,5 +400,42 @@ body {
     font-family: "Open Sans",Arial,sans-serif;
     padding-top: 10px;
     padding-bottom: 10px; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #header .nav-header .container .navbar-header {
+    margin: 0 auto;
+    min-width: 100%; }
+    #header .nav-header .container .navbar-header a.navbar-brand {
+      float: left;
+      max-width: 40%;
+      height: auto; }
+      #header .nav-header .container .navbar-header a.navbar-brand #logo {
+        min-width: 80%;
+        height: auto; }
+    #header .nav-header .container .navbar-header .icon-bar {
+      background-color: #FFF !important; }
+  #header .nav-header .container .navbar-collapse li a {
+    width: 100%;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+    color: #fff; }
+  #header .nav-header .container .navbar-collapse {
+    background-color: #002E5B; }
+
+  #content #workplade #page-container .workplade-content .acc ul:hover li, #content #workplade body #wrapper #footer .footer-wrapper .workplade-content .acc ul:hover li, body #wrapper #footer #content #workplade .footer-wrapper .workplade-content .acc ul:hover li {
+    width: 1px; }
+  #content #workplade #page-container .workplade-content .acc ul li:hover, #content #workplade body #wrapper #footer .footer-wrapper .workplade-content .acc ul li:hover, body #wrapper #footer #content #workplade .footer-wrapper .workplade-content .acc ul li:hover {
+    min-width: 200%; } }
+@media screen and (min-width: 768px) {
+  #header .nav-header .container .navbar-header {
+    max-width: 20%; }
+    #header .nav-header .container .navbar-header .navbar-brand #logo {
+      min-width: 80%; }
+  #header .nav-header .container .navbar-collapse {
+    min-width: 80%; }
+    #header .nav-header .container .navbar-collapse .navbar-right li a.about-us {
+      font-size: 10px; } }
 
 /*# sourceMappingURL=index.css.map */

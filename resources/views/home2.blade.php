@@ -132,31 +132,52 @@
             <button type="button" class="btn btn-secondary">TUYỂN DỤNG</button>
         </div>
     </div>
-    <div id="workplade">
+    <div id="workplace">
         <div id="page-container">
-            <div class="workplade-header">
-                <p id="workplade-small-title">WORKPLACE</p>
+            <div class="workplace-header">
+                <p id="workplace-small-title">WORKPLACE</p>
             </div>
-            <div class="workplade-content">
+            <div class="workplace-content">
                 <div class="acc">
                     <ul>
                       <li>
-                        <img src="http://blogs-images.forbes.com/carolpinchefsky/files/2012/10/Skyfall.jpg">
+                        <image class="workplace-image" src="/images/home5.jpg" />
                       </li>
                       <li>
-                        <img src="http://www.fymplanet.com/wp-content/uploads/2013/05/Star-Trek.jpg">
+                        <image class="workplace-image" src="/images/home4.jpg" />
                       </li>
                       <li>
-                        <img src="http://p1.pichost.me/i/17/1400512.jpg">
+                        <image class="workplace-image" src="/images/home2.jpg" />
                       </li>
                       <li>
-                        <img src="http://risensources.com/wp-content/uploads/2011/05/Risensources-transformer-5.jpg">
+                        <image class="workplace-image" src="/images/home1.jpg" />
                       </li>
                       <li>
-                        <img src="http://farm8.staticflickr.com/7435/10067483716_2b6a593ca8.jpg">
+                        <image class="workplace-image" src="/images/home5.jpg" />
                       </li>
                     </ul>
                   </div>
+            </div>
+        </div>
+    </div>
+    <div id="customer">
+        <div id="page-container">
+            <div class="customer-header">
+                <p id="customer-small-title">CUSTOMER</p>
+            </div>
+            <div class="customer-content">
+                <div class="Marquee">
+                    <div class="Marquee-content">
+                      <div class="Marquee-tag"><image class="customer-image" src="/images/home4.jpg" /></div>
+                      <div class="Marquee-tag"><image class="customer-image" src="/images/home1.jpg" /></div>
+                      <div class="Marquee-tag"><image class="customer-image" src="/images/home2.jpg" /></div>
+                      <div class="Marquee-tag"><image class="customer-image" src="/images/home5.jpg" /></div>
+                      <div class="Marquee-tag"><image class="customer-image" src="/images/home4.jpg" /></div>
+                      <div class="Marquee-tag"><image class="customer-image" src="/images/home1.jpg" /></div>
+                      <div class="Marquee-tag"><image class="customer-image" src="/images/home2.jpg" /></div>
+                      <div class="Marquee-tag"><image class="customer-image" src="/images/home5.jpg" /></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

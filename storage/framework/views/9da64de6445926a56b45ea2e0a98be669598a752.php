@@ -12,9 +12,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
     <link href="<?php echo e(asset('/css/index.css')); ?>" rel="stylesheet"> 
     <script type="text/javascript" src="<?php echo e(URL::asset('js/javascript.js')); ?>"></script>
+    
+    <!-- JavaScripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <?php /* <script src="<?php echo e(elixir('js/app.js')); ?>"></script> */ ?>
+
+    <script>
+        function channgeStyle(){
+            header.style.backgroundColor = '#002E5B';
+        }
+    </script>
 </header>
 <body>
     <div id="wrapper">
@@ -33,7 +44,7 @@
 
                         <!-- Branding Image -->
                         <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                            <image id="logo" src="images/logo-rikkei.png"/>
+                            <image id="logo" src="../images/logo-rikkei.png"/>
                         </a>
                     </div>
 
@@ -59,8 +70,8 @@
                             </li>
                             <!-- Authentication Links -->
                             <?php if(Auth::guest()): ?>
-                            <li><a class="login" href="<?php echo e(url('/login')); ?>">LOGIN</a></li>
-                            <li><a class="register" href="<?php echo e(url('/register')); ?>">REGISTER</a></li>
+                            <li><a class="about-us" href="<?php echo e(url('/login')); ?>">LOGIN</a></li>
+                            <li><a class="about-us" href="<?php echo e(url('/register')); ?>">REGISTER</a></li>
                             <?php else: ?>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -84,7 +95,7 @@
                     <div class="col-md-4">
                         <div class="logo-footer">
                         <a class="container-logo" href="<?php echo e(url('/')); ?>">
-                            <image id="logo-footer" src="images/logo-rikkei.png"/>
+                            <image id="logo-footer" src="../images/logo-rikkei.png"/>
                         </a>
                         </div>
                         <div class="footer-content1">

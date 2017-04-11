@@ -14,30 +14,31 @@
 <!--    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="css/example1.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<!--    <script>
-       function getElements(className) {
-  return document.getElementsByClassName(className);
-}
-const content = getElements('Marquee-content');
-const container = getElements('Marquee');
-const contentWidth = content[0].offsetWidth;
-const containerWidth = container[0].offsetWidth;
-    </script>-->
+    <script>
+        $(function() {
+            $('#colorselector').change(function(){
+              $('.colors').hide();
+              $('#' + $(this).val()).show();
+            });
+          });
+          // [forked from](http://jsfiddle.net/FvMYz/)
+          // [show-hide-based-on-select-option-jquery)(http://stackoverflow.com/questions/2975521/show-hide-div-based-on-select-option-jquery/2975565#2975565)
+    </script>
 </head>
 <body>
-    <div class="Marquee">
-  <div class="Marquee-content">
-    <div class="Marquee-tag">1</div>
-    <div class="Marquee-tag">2</div>
-    <div class="Marquee-tag">3</div>
-    <div class="Marquee-tag">4</div>
-    <div class="Marquee-tag">5</div>
-    <div class="Marquee-tag">1</div>
-    <div class="Marquee-tag">2</div>
-    <div class="Marquee-tag">3</div>
-    <div class="Marquee-tag">4</div>
-    <div class="Marquee-tag">5</div>
-  </div>
-</div>
+    <label class="wrapper" for="states">This label is stacked above the select</label>
+    <div class="button dropdown"> 
+      <select id="colorselector">
+         <option value="red">Red</option>
+         <option value="yellow">Yellow</option>
+         <option value="blue">Blue</option>
+      </select>
+    </div>
+
+    <div class="output">
+      <div id="red" class="colors red">  “Good artists copy, great artists steal” Pablo Picasso</div>
+      <div id="yellow" class="colors yellow"> “Art is the lie that enables us to realize the truth” Pablo Picasso</div>
+      <div id="blue" class="colors blue"> “If I don't have red, I use blue” Pablo Picasso</div>
+    </div>
 </body>
 </html>
