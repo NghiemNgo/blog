@@ -1,31 +1,31 @@
-$(document).ready(function(){
-    $(window).bind('scroll', function() {
-      var distance = 300;
-      if ($(window).scrollTop() > distance) {
-        header.style.backgroundColor = '#002E5B';
-      }
-      else {
-        header.style.backgroundColor = 'transparent';
-      }
-      if ($(window).scrollTop() > 700) {
-          $('body').addClass('scrolled');
-      } else {
-          $('body').removeClass('scrolled');
-      }
-    });
-    $('.section-third-page').click(function () {
-    $('iframe.maps').css("pointer-events", "auto");
-    });
-    $( ".section-third-page" ).mouseleave(function() {
-      $('iframe.maps').css("pointer-events", "none"); 
-    });
-    $(function() {
-        $('#colorselector').change(function(){
-            $('.colors').hide();
-            $('#' + $(this).val()).show();
-        });
-    });
-});
+//$(document).ready(function(){
+//    $(window).bind('scroll', function() {
+//      var distance = 300;
+//      if ($(window).scrollTop() > distance) {
+//        header.style.backgroundColor = '#002E5B';
+//      }
+//      else {
+//        header.style.backgroundColor = 'transparent';
+//      }
+//      if ($(window).scrollTop() > 700) {
+//          $('body').addClass('scrolled');
+//      } else {
+//          $('body').removeClass('scrolled');
+//      }
+//    });
+//    $('.section-third-page').click(function () {
+//    $('iframe.maps').css("pointer-events", "auto");
+//    });
+//    $( ".section-third-page" ).mouseleave(function() {
+//      $('iframe.maps').css("pointer-events", "none"); 
+//    });
+//    $(function() {
+//        $('#colorselector').change(function(){
+//            $('.colors').hide();
+//            $('#' + $(this).val()).show();
+//        });
+//    });
+//});
 
 //preview image before uploaded
 function readURL(input) {
@@ -154,3 +154,4 @@ function checkCustomer(){
     var smallTitle = document.getElementById("customer_small_title").value;
     document.getElementById("customer-small-title").innerHTML = smallTitle;
 }
+

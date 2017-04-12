@@ -25,6 +25,11 @@
                            @endforeach
                         </select>
                       </div>
+                        @if ($errors->has('error'))
+                            <span class="help-block">
+                                 <strong>{{ $errors->first('error') }}</strong>
+                            </span>
+                        @endif
                     </div>
                 </div>
             </form>
@@ -299,15 +304,15 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('news_page_image1') ? ' has-error' : '' }}">
-                            <label for="news_page_image1" class="col-md-2 control-label">Image 1</label>
+                        <div class="form-group{{ $errors->has('small_img') ? ' has-error' : '' }}">
+                            <label for="small_img" class="col-md-2 control-label">Image 1</label>
 
                             <div class="col-md-8">
                                 <input type='file' name="small_img[]" onchange="readURL(this);" />
 
-                                @if ($errors->has('news_page_content1'))
+                                @if ($errors->has('small_img'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('news_page_content1') }}</strong>
+                                        <strong>{{ $errors->first('small_img') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -336,15 +341,15 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('news_page_image2') ? ' has-error' : '' }}">
-                            <label for="news_page_image2" class="col-md-2 control-label">Image 2</label>
+                        <div class="form-group{{ $errors->has('small_img') ? ' has-error' : '' }}">
+                            <label for="small_img" class="col-md-2 control-label">Image 2</label>
 
                             <div class="col-md-8">
                                 <input type='file' name="small_img[]" onchange="readURL2(this);" />
 
-                                @if ($errors->has('news_page_image2'))
+                                @if ($errors->has('small_img'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('news_page_image2') }}</strong>
+                                        <strong>{{ $errors->first('small_img') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -373,15 +378,15 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('news_page_image3') ? ' has-error' : '' }}">
-                            <label for="news_page_image3" class="col-md-2 control-label">Image 3</label>
+                        <div class="form-group{{ $errors->has('small_img') ? ' has-error' : '' }}">
+                            <label for="small_img" class="col-md-2 control-label">Image 3</label>
 
                             <div class="col-md-8">
                                 <input type='file' name="small_img[]" onchange="readURL3(this);" />
 
-                                @if ($errors->has('news_page_image3'))
+                                @if ($errors->has('small_img'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('news_page_image3') }}</strong>
+                                        <strong>{{ $errors->first('small_img') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -410,15 +415,15 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('news_page_image4') ? ' has-error' : '' }}">
-                            <label for="news_page_image4" class="col-md-2 control-label">Image 4</label>
+                        <div class="form-group{{ $errors->has('small_img') ? ' has-error' : '' }}">
+                            <label for="small_img" class="col-md-2 control-label">Image 4</label>
 
                             <div class="col-md-8">
                                 <input type='file' name="small_img[]" onchange="readURL4(this);" />
 
-                                @if ($errors->has('news_page_image4'))
+                                @if ($errors->has('small_img'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('news_page_image4') }}</strong>
+                                        <strong>{{ $errors->first('small_img') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -555,15 +560,15 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('select_images') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('img') ? ' has-error' : '' }}">
                             <label for="select_images" class="col-md-2 control-label">Select images</label>
 
                             <div class="col-md-8">
                                 <input id="select_images" type="file" name="img[]" multiple>
 
-                                @if ($errors->has('select_images'))
+                                @if ($errors->has('img'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('select_images') }}</strong>
+                                        <strong>{{ $errors->first('img') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -600,15 +605,15 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('select_images') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('img') ? ' has-error' : '' }}">
                             <label for="select_images" class="col-md-2 control-label">Select images</label>
 
                             <div class="col-md-8">
                                 <input id="select_images" type="file" name="img[]" multiple>
 
-                                @if ($errors->has('select_images'))
+                                @if ($errors->has('img'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('select_images') }}</strong>
+                                        <strong>{{ $errors->first('img') }}</strong>
                                     </span>
                                 @endif
                             </div>

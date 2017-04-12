@@ -24,6 +24,11 @@
                            <?php endforeach; ?>
                         </select>
                       </div>
+                        <?php if($errors->has('error')): ?>
+                            <span class="help-block">
+                                 <strong><?php echo e($errors->first('error')); ?></strong>
+                            </span>
+                        <?php endif; ?>
                     </div>
                 </div>
             </form>
@@ -301,15 +306,15 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="form-group<?php echo e($errors->has('news_page_image1') ? ' has-error' : ''); ?>">
-                            <label for="news_page_image1" class="col-md-2 control-label">Image 1</label>
+                        <div class="form-group<?php echo e($errors->has('small_img') ? ' has-error' : ''); ?>">
+                            <label for="small_img" class="col-md-2 control-label">Image 1</label>
 
                             <div class="col-md-8">
                                 <input type='file' name="small_img[]" onchange="readURL(this);" />
 
-                                <?php if($errors->has('news_page_content1')): ?>
+                                <?php if($errors->has('small_img')): ?>
                                     <span class="help-block">
-                                        <strong><?php echo e($errors->first('news_page_content1')); ?></strong>
+                                        <strong><?php echo e($errors->first('small_img')); ?></strong>
                                     </span>
                                 <?php endif; ?>
                             </div>
@@ -338,15 +343,15 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="form-group<?php echo e($errors->has('news_page_image2') ? ' has-error' : ''); ?>">
-                            <label for="news_page_image2" class="col-md-2 control-label">Image 2</label>
+                        <div class="form-group<?php echo e($errors->has('small_img') ? ' has-error' : ''); ?>">
+                            <label for="small_img" class="col-md-2 control-label">Image 2</label>
 
                             <div class="col-md-8">
                                 <input type='file' name="small_img[]" onchange="readURL2(this);" />
 
-                                <?php if($errors->has('news_page_image2')): ?>
+                                <?php if($errors->has('small_img')): ?>
                                     <span class="help-block">
-                                        <strong><?php echo e($errors->first('news_page_image2')); ?></strong>
+                                        <strong><?php echo e($errors->first('small_img')); ?></strong>
                                     </span>
                                 <?php endif; ?>
                             </div>
@@ -375,15 +380,15 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="form-group<?php echo e($errors->has('news_page_image3') ? ' has-error' : ''); ?>">
-                            <label for="news_page_image3" class="col-md-2 control-label">Image 3</label>
+                        <div class="form-group<?php echo e($errors->has('small_img') ? ' has-error' : ''); ?>">
+                            <label for="small_img" class="col-md-2 control-label">Image 3</label>
 
                             <div class="col-md-8">
                                 <input type='file' name="small_img[]" onchange="readURL3(this);" />
 
-                                <?php if($errors->has('news_page_image3')): ?>
+                                <?php if($errors->has('small_img')): ?>
                                     <span class="help-block">
-                                        <strong><?php echo e($errors->first('news_page_image3')); ?></strong>
+                                        <strong><?php echo e($errors->first('small_img')); ?></strong>
                                     </span>
                                 <?php endif; ?>
                             </div>
@@ -412,15 +417,15 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="form-group<?php echo e($errors->has('news_page_image4') ? ' has-error' : ''); ?>">
-                            <label for="news_page_image4" class="col-md-2 control-label">Image 4</label>
+                        <div class="form-group<?php echo e($errors->has('small_img') ? ' has-error' : ''); ?>">
+                            <label for="small_img" class="col-md-2 control-label">Image 4</label>
 
                             <div class="col-md-8">
                                 <input type='file' name="small_img[]" onchange="readURL4(this);" />
 
-                                <?php if($errors->has('news_page_image4')): ?>
+                                <?php if($errors->has('small_img')): ?>
                                     <span class="help-block">
-                                        <strong><?php echo e($errors->first('news_page_image4')); ?></strong>
+                                        <strong><?php echo e($errors->first('small_img')); ?></strong>
                                     </span>
                                 <?php endif; ?>
                             </div>
@@ -560,15 +565,15 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="form-group<?php echo e($errors->has('select_images') ? ' has-error' : ''); ?>">
+                        <div class="form-group<?php echo e($errors->has('img') ? ' has-error' : ''); ?>">
                             <label for="select_images" class="col-md-2 control-label">Select images</label>
 
                             <div class="col-md-8">
                                 <input id="select_images" type="file" name="img[]" multiple>
 
-                                <?php if($errors->has('select_images')): ?>
+                                <?php if($errors->has('img')): ?>
                                     <span class="help-block">
-                                        <strong><?php echo e($errors->first('select_images')); ?></strong>
+                                        <strong><?php echo e($errors->first('img')); ?></strong>
                                     </span>
                                 <?php endif; ?>
                             </div>
@@ -606,15 +611,15 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="form-group<?php echo e($errors->has('select_images') ? ' has-error' : ''); ?>">
+                        <div class="form-group<?php echo e($errors->has('img') ? ' has-error' : ''); ?>">
                             <label for="select_images" class="col-md-2 control-label">Select images</label>
 
                             <div class="col-md-8">
                                 <input id="select_images" type="file" name="img[]" multiple>
 
-                                <?php if($errors->has('select_images')): ?>
+                                <?php if($errors->has('img')): ?>
                                     <span class="help-block">
-                                        <strong><?php echo e($errors->first('select_images')); ?></strong>
+                                        <strong><?php echo e($errors->first('img')); ?></strong>
                                     </span>
                                 <?php endif; ?>
                             </div>

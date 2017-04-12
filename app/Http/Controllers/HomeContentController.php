@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
 use App\Model\HomeContent;
 use App\Model\HomeCategory;
 use App\Model\HomeContentType;
@@ -14,6 +11,9 @@ use App\Model\HomeImage;
 use App\Model\SmallContent;
 use App\Model\SmallContentImage;
 use App\Model\HomeSmallContent;
+use App\Http\Controllers\ImageController;
+use Validator;
+use DB;
 
 class HomeContentController extends Controller
 {
@@ -24,7 +24,16 @@ class HomeContentController extends Controller
      */
     public function index()
     {
-        //
+        $items = DB::table('home_content_types')
+            ->join('home_contents', 'home_content_types.home_content_id', '=', 'home_contents.id')
+            ->join('home_categories', 'home_content_types.home_category_id', '=', 'home_categories.id')
+            ->leftJoin('home_small_contents', 'home_contents.id', '=', 'home_small_contents.home_content_id')
+            ->leftJoin('small_contents', 'small_contents.id', '=', 'home_small_contents.small_content_id')
+            ->select('home_contents.*', 'home_categories.name', 'home_categories.id', 'small_contents.title as smallContentTitle',
+                    'small_contents.content as smallContent')
+            ->get();
+    dd($items); exit;
+        return view('home2', ['items' => $items]);
     }
 
     /**
@@ -45,6 +54,28 @@ class HomeContentController extends Controller
      */
     public function store(Request $request)
     {   
+        $rules = [];
+        if($request->file('img') != null) {
+            $img = $request->file('img');
+            $imgCount = count($img) - 1;
+            foreach(range(0, $imgCount) as $index) {
+                $rules['img.' . $index] = 'required|mimes:jpeg,jpg,png|max:2048';
+            }
+        }
+        if($request->file('small_img') != null) {
+            $smallImg = $request->file('small_img');
+            $smallImgCount = count($smallImg) - 1;
+            foreach(range(0, $smallImgCount) as $index) {
+                $rules['small_img.' . $index] = 'required|mimes:jpeg,jpg,png|max:2048';
+            }
+        }
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            return redirect()->route('home.items')
+                        ->withErrors(array('error'=>'Image must be required and type of image are jpeg, jpg, png and max file 2m'))
+                        ->withInput();
+        }
             //dd($request->file('small_img')); exit;
         $homeContent = new HomeContent;
         if($request->input('small_title')) { 
@@ -67,18 +98,13 @@ class HomeContentController extends Controller
             $homeContentType->save();                           //save content_id and category id of Home page items
             if($request->file('img')[0] != null) {              // check exist upload file
                 $files = $request->file('img');
-                foreach ($files as $file) {                        //save multiple images uploaded.
-                    $destinationPath = public_path().'/home_images';
-                    $baseName = $file->getClientOriginalName();     // get base name file
-                    $fileName = time() . '-' . $baseName;           //create new name file
-                    $upload_success = $file->move($destinationPath, $fileName);
-                    if($upload_success) {
-                        $upload_image = new Image;                  //save url image
-                        $upload_image->image = $destinationPath.'/'.$fileName;
-                        $upload_image->save();
+                foreach ($files as $file) {
+                    //save multiple images uploaded.
+                    $imageId = (new ImageController)->saveImage($file);
+                    if($imageId != FALSE) {
                         $homeImage = new HomeImage;                 //save homeimage with content_id and image_id
                         $homeImage->home_content_id = $homeContent->id;
-                        $homeImage->image_id = $upload_image->id;
+                        $homeImage->image_id = $imageId;
                         $homeImage->save();
                     }
                     
@@ -95,25 +121,16 @@ class HomeContentController extends Controller
                     $smallContent->content = $smallContents[$key];
                     if($smallContent->save()) {                     //save each small_content
                         if($smallImages[$key] != null) {
-                            $file = $smallImages[$key];
-                            $destinationPath = public_path().'/small_images';   
-                            $baseName = $file->getClientOriginalName();     // get base name file
-                            $fileName = time() . '-' . $baseName;           //create new name file
-                            $upload_success = $file->move($destinationPath, $fileName);
-                            if($upload_success) {
-                                $upload_image = new Image;                  //save url image
-                                $upload_image->image = $destinationPath.'/'.$fileName;
-                                $upload_image->save();                                              //Save image uploaded.
+                            $imageId = (new ImageController)->saveImage($smallImages[$key]);
+                            if($imageId != FALSE) {
+                                  //Save image uploaded.
                                 $smallContentImage = new SmallContentImage;
                                 $smallContentImage->small_content_id = $smallContent->id;
-                                $smallContentImage->image_id = $upload_image->id;
-                                $smallContentImage->save();                                         //Save small_content and image on SmallContentImage Table
+                                $smallContentImage->image_id = $imageId;
+                                $smallContentImage->save();             //Save small_content and image on SmallContentImage Table
                             }
                         }
-                        $homeSmallContent = new HomeSmallContent;                                   //Save small_content and home_content on HomeSmallContent Table
-                        $homeSmallContent->home_content_id = $homeContent->id;
-                        $homeSmallContent->small_content_id = $smallContent->id;
-                        $homeSmallContent->save();
+                        $this->homeSmallContent($homeContent->id, $smallContent->id);  // Save data to HomeSmallContent table
                     }
                     
                 }
@@ -167,5 +184,16 @@ class HomeContentController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    //Save small_content and home_content on HomeSmallContent Table
+    public function homeSmallContent($homeContentId, $smallContentId) {
+        $homeSmallContent = new HomeSmallContent;                                   
+        $homeSmallContent->home_content_id = $homeContentId;
+        $homeSmallContent->small_content_id = $smallContentId;
+        if($homeSmallContent->save()) {
+            return $homeSmallContent->id;
+        }
+        return FALSE;
     }
 }

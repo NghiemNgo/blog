@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 <link href="{{ asset('/css/home.css') }}" rel="stylesheet"> 
 @section('content')
 <div class="entry-content">

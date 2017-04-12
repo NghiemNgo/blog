@@ -70,6 +70,15 @@ class PostController extends Controller{
         }
         return redirect()->route('post.create');
     }
+    public function testAjax(Request $request) {
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->description = $request->input('description');
+        $post->requires = $request->input('requires');
+        $post->salary = $request->input('salary');
+        $post->save();
+    }
+
     public function show($id)
     {
         $post = Post::findOrFail($id);

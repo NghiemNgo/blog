@@ -11,7 +11,27 @@ function add(){
         document.getElementById('test').appendChild(node);
         document.getElementById('inputCategories').value="";
     }
+    
 }
+
+function  ajaxExample(){
+    var _token = $('input[name="_token"]').val();
+    var title = document.getElementById('title').value;
+    var salary = document.getElementById('salary').value;
+    var description = document.getElementById('description').value;
+    var requires = document.getElementById('requires').value;
+    $.ajax({
+           type: "POST",
+           url: "<?php echo e(URL::route('post.ajax')); ?>",
+           data: { _token : _token, title: title, salary: salary, description: description, requires: requires },
+           success: function(data)
+           {
+               alert("Success"); 
+           }
+    });
+    return false; 
+}
+
 </script>
 <?php $__env->startSection('content'); ?>
 <div id="content">
@@ -30,7 +50,7 @@ function add(){
                             <label for="title" class="col-md-2 control-label">Title</label>
 
                             <div class="col-md-8">
-                                <input id="name" type="text" class="form-control" name="title" value="<?php echo e(old('title')); ?>">
+                                <input id="title" type="text" class="form-control" name="title" value="<?php echo e(old('title')); ?>">
 
                                 <?php if($errors->has('title')): ?>
                                     <span class="help-block">
@@ -44,7 +64,7 @@ function add(){
                             <label for="title" class="col-md-2 control-label">Salary</label>
 
                             <div class="col-md-8">
-                                <input id="name" type="text" class="form-control" placeholder="$(dolar)" name="salary" value="<?php echo e(old('salary')); ?>">
+                                <input id="salary" type="text" class="form-control" placeholder="$(dolar)" name="salary" value="<?php echo e(old('salary')); ?>">
 
                                 <?php if($errors->has('salary')): ?>
                                     <span class="help-block">
@@ -109,9 +129,11 @@ function add(){
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn"></i> Create
                                 </button>
+                                
                             </div>
                         </div>
                     </form>
+                    <button onclick="ajaxExample()">Try it</button>
                 </div>
             </div>
         </div>

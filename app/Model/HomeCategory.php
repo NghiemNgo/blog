@@ -14,4 +14,12 @@ class HomeCategory extends Model
     protected $fillable = [
         'name',
     ];
+    
+     /**
+     * Get the HomeContent for the HomeCategory.
+     */
+    public function homeContentTypes()
+    {
+        return $this->hasMany('App\Model\HomeContentType');
+    }
 }

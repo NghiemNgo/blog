@@ -14,4 +14,12 @@ class HomeContent extends Model
     protected $fillable = [
         'small_title', 'big_title', 'content', 'slogan',
     ];
+    
+    /**
+     * Get the type for the HomeContent.
+     */
+    public function homeContentTypes()
+    {
+        return $this->hasMany('App\Model\HomeContentType');
+    }
 }
