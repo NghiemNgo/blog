@@ -518,6 +518,13 @@ body {
                 padding-top: 100px;
                 height: 1500px;
             }
+            #page-content {
+                width: 100%;
+                position: relative;
+                #page-container {
+                    padding-top: 100px;
+                }
+            }
         }
         #footer {
             background: #002E5B;
@@ -562,7 +569,7 @@ body {
         }
     }
 }
- #page-container {                   
+ #page-container {   
     width: 80%;
     position: relative;
     margin: 0 auto;
@@ -590,6 +597,11 @@ body {
     .button-edit {
          float: right;
     }
+ }
+ #pageContent {
+    padding-top: 100px;
+    position: relative;
+    padding-bottom: 20px;
  }
  @media screen and (min-width: 320px) and (max-width: 767px) {
     #header {

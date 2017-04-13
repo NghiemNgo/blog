@@ -176,8 +176,21 @@ class HomeContentController extends Controller
      */
     public function edit($id)
     {
-        $homeContent = HomeContent::findOrFail($id);
-        return view('homeContent.edit', ['$homeContent' => $homeContent]);
+        $homeContent = DB::table('home_content_types')
+            ->join('home_contents', 'home_content_types.home_content_id', '=', 'home_contents.id')
+            ->join('home_categories', 'home_content_types.home_category_id', '=', 'home_categories.id')
+            ->leftJoin('home_images', 'home_images.home_content_id', '=', 'home_contents.id')
+            ->leftJoin('images', 'images.id', '=', 'home_images.image_id')
+            ->where('home_contents.id', '=', $id)
+            ->select('home_contents.*', 'home_categories.name as home_category_name', 'home_categories.id as home_category_id', 
+                    'images.id as home_image_id', 'images.image as home_image_url')
+            ->get();
+        $smallItems = DB::table('home_small_contents')
+                ->leftJoin('small_content_images', 'small_content_images.home_small_content_id', '=', 'home_small_contents.id')
+                ->leftJoin('images', 'small_content_images.image_id', '=', 'images.id')
+                ->where('home_small_contents.home_content_id', '=', $id)
+                ->get();
+        return view('homeContents.edit', ['homeContent' => $homeContent[0], 'smallItems' => $smallItems] );
     }
 
     /**

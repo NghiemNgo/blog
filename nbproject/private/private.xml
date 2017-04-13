@@ -6,11 +6,11 @@
             <file>file:/home/nghiemnv/web/blog/.env</file>
             <file>file:/home/nghiemnv/web/blog/resources/views/home2.blade.php</file>
             <file>file:/home/nghiemnv/web/blog/app/Http/routes.php</file>
-            <file>file:/home/nghiemnv/web/blog/app/Model/HomeContentType.php</file>
-            <file>file:/home/nghiemnv/web/blog/public/js/javascript.js</file>
-            <file>file:/home/nghiemnv/web/blog/app/Http/Controllers/ApplyController.php</file>
+            <file>file:/home/nghiemnv/web/blog/resources/views/homeContents/index.blade.php</file>
+            <file>file:/home/nghiemnv/web/blog/public/scss/index.scss</file>
+            <file>file:/home/nghiemnv/web/blog/resources/views/homeContents/edit.blade.php</file>
+            <file>file:/home/nghiemnv/web/blog/app/Http/Controllers/PostController.php</file>
             <file>file:/home/nghiemnv/web/blog/app/Http/Controllers/HomeContentController.php</file>
-            <file>file:/home/nghiemnv/web/blog/resources/views/layouts/app2.blade.php</file>
             <file>file:/home/nghiemnv/web/blog/resources/views/homeCategories/index.blade.php</file>
         </group>
     </open-files>

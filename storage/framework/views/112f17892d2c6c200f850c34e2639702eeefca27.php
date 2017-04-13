@@ -14,23 +14,23 @@ function add(){
     
 }
 
-function  ajaxExample(){
-    var _token = $('input[name="_token"]').val();
-    var title = document.getElementById('title').value;
-    var salary = document.getElementById('salary').value;
-    var description = document.getElementById('description').value;
-    var requires = document.getElementById('requires').value;
-    $.ajax({
-           type: "POST",
-           url: "<?php echo e(URL::route('post.ajax')); ?>",
-           data: { _token : _token, title: title, salary: salary, description: description, requires: requires },
-           success: function(data)
-           {
-               alert("Success"); 
-           }
-    });
-    return false; 
-}
+//function  ajaxExample(){
+//    var _token = $('input[name="_token"]').val();
+//    var title = document.getElementById('title').value;
+//    var salary = document.getElementById('salary').value;
+//    var description = document.getElementById('description').value;
+//    var requires = document.getElementById('requires').value;
+//    $.ajax({
+//           type: "POST",
+//           url: "<?php echo e(URL::route('post.ajax')); ?>",
+//           data: { _token : _token, title: title, salary: salary, description: description, requires: requires },
+//           success: function(data)
+//           {
+//               alert("Success"); 
+//           }
+//    });
+//    return false; 
+//}
 
 </script>
 <?php $__env->startSection('content'); ?>
@@ -133,7 +133,7 @@ function  ajaxExample(){
                             </div>
                         </div>
                     </form>
-                    <button onclick="ajaxExample()">Try it</button>
+<!--                    <button onclick="ajaxExample()">Try it</button>-->
                 </div>
             </div>
         </div>
