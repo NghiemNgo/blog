@@ -18,7 +18,7 @@ class ImageController extends Controller
         $upload_success = $file->move($destinationPath, $fileName);
         if($upload_success) {
             $upload_image = new Image;                  //save url image
-            $upload_image->image = $destinationPath.'/'.$fileName;
+            $upload_image->image = $fileName;
             $upload_image->save();
             return $upload_image->id;
         }

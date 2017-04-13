@@ -145,7 +145,7 @@
                         <div class="form-group{{ $errors->has('products_page_title1') ? ' has-error' : '' }}">
                             <label for="products_page_title1" class="col-md-2 control-label">Title 1</label>
                             <div class="col-md-8">
-                                <input id="products_page_title1" type="text" class="form-control" name="title1" value="{{ old('products_page_title1') }}">
+                                <input id="products_page_title1" type="text" class="form-control" name="small_content_title[]" value="{{ old('products_page_title1') }}">
                                 @if ($errors->has('products_page_title1'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('products_page_title1') }}</strong>
@@ -157,7 +157,7 @@
                             <label for="products_page_content1" class="col-md-2 control-label">Content 1</label>
 
                             <div class="col-md-8">
-                                <textarea id="products_page_content1" class="form-control" rows="3" cols="90" name="content1"></textarea>
+                                <textarea id="products_page_content1" class="form-control" rows="3" cols="90" name="small_content[]"></textarea>
 
                                 @if ($errors->has('products_page_content1'))
                                     <span class="help-block">
@@ -169,7 +169,7 @@
                         <div class="form-group{{ $errors->has('products_page_title2') ? ' has-error' : '' }}">
                             <label for="products_page_title2" class="col-md-2 control-label">Title 2</label>
                             <div class="col-md-8">
-                                <input id="products_page_title2" type="text" class="form-control" name="title2" value="{{ old('products_page_title2') }}">
+                                <input id="products_page_title2" type="text" class="form-control" name="small_content_title[]" value="{{ old('products_page_title2') }}">
                                 @if ($errors->has('products_page_title2'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('products_page_title2') }}</strong>
@@ -181,7 +181,7 @@
                             <label for="products_page_content2" class="col-md-2 control-label">Content 2</label>
 
                             <div class="col-md-8">
-                                <textarea id="products_page_content2" class="form-control" rows="3" cols="90" name="content2"></textarea>
+                                <textarea id="products_page_content2" class="form-control" rows="3" cols="90" name="small_content[]"></textarea>
 
                                 @if ($errors->has('products_page_content2'))
                                     <span class="help-block">
@@ -193,7 +193,7 @@
                         <div class="form-group{{ $errors->has('products_page_title3') ? ' has-error' : '' }}">
                             <label for="products_page_title3" class="col-md-2 control-label">Title 3</label>
                             <div class="col-md-8">
-                                <input id="products_page_title3" type="text" class="form-control" name="title3" value="{{ old('products_page_title3') }}">
+                                <input id="products_page_title3" type="text" class="form-control" name="small_content_title[]" value="{{ old('products_page_title3') }}">
                                 @if ($errors->has('products_page_title3'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('products_page_title3') }}</strong>
@@ -205,7 +205,7 @@
                             <label for="products_page_content3" class="col-md-2 control-label">Content 3</label>
 
                             <div class="col-md-8">
-                                <textarea id="products_page_content3" class="form-control" rows="3" cols="90" name="content3"></textarea>
+                                <textarea id="products_page_content3" class="form-control" rows="3" cols="90" name="small_content[]"></textarea>
 
                                 @if ($errors->has('products_page_content3'))
                                     <span class="help-block">
@@ -217,7 +217,7 @@
                         <div class="form-group{{ $errors->has('products_page_title4') ? ' has-error' : '' }}">
                             <label for="products_page_title4" class="col-md-2 control-label">Title 4</label>
                             <div class="col-md-8">
-                                <input id="products_page_title4" type="text" class="form-control" name="title4" value="{{ old('products_page_title4') }}">
+                                <input id="products_page_title4" type="text" class="form-control" name="small_content_title[]" value="{{ old('products_page_title4') }}">
                                 @if ($errors->has('products_page_title4'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('products_page_title4') }}</strong>
@@ -229,7 +229,7 @@
                             <label for="products_page_content4" class="col-md-2 control-label">Content 4</label>
 
                             <div class="col-md-8">
-                                <textarea id="products_page_content4" class="form-control" rows="3" cols="90" name="content4"></textarea>
+                                <textarea id="products_page_content4" class="form-control" rows="3" cols="90" name="small_content[]"></textarea>
 
                                 @if ($errors->has('products_page_content4'))
                                     <span class="help-block">

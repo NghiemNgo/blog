@@ -12,6 +12,6 @@ class HomeSmallContent extends Model
      * @var array
      */
     protected $fillable = [
-        'home_content_id', 'small_content_id',
+        'title', 'content', 'home_content_id',
     ];
 }

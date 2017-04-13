@@ -11,7 +11,7 @@
 |
 */
 
-Route::auth();
+//Route::auth();
 Route::get('home2', function () {
     return view('home2');
 });
@@ -39,3 +39,5 @@ Route::post('home/store', 'HomeContentController@store')->name('home.create');
 
 //homeContent
 Route::get('homeContent', 'HomeContentController@index')->name('home.index');
+Route::get('home/items/{id}/edit', 'HomeContentController@edit')->name('home.editItem');
+Route::get('home/items/{id}/delete', 'HomeContentController@delete')->name('home.deleteItem');

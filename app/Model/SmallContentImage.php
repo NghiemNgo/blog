@@ -12,6 +12,6 @@ class SmallContentImage extends Model
      * @var array
      */
     protected $fillable = [
-        'small_content_id', 'image_id',
+        'home_small_content_id', 'image_id',
     ];
 }

@@ -8,7 +8,6 @@ use App\Model\HomeCategory;
 use App\Model\HomeContentType;
 use App\Model\Image;
 use App\Model\HomeImage;
-use App\Model\SmallContent;
 use App\Model\SmallContentImage;
 use App\Model\HomeSmallContent;
 use App\Http\Controllers\ImageController;
@@ -27,13 +26,30 @@ class HomeContentController extends Controller
         $items = DB::table('home_content_types')
             ->join('home_contents', 'home_content_types.home_content_id', '=', 'home_contents.id')
             ->join('home_categories', 'home_content_types.home_category_id', '=', 'home_categories.id')
-            ->leftJoin('home_small_contents', 'home_contents.id', '=', 'home_small_contents.home_content_id')
-            ->leftJoin('small_contents', 'small_contents.id', '=', 'home_small_contents.small_content_id')
-            ->select('home_contents.*', 'home_categories.name', 'home_categories.id', 'small_contents.title as smallContentTitle',
-                    'small_contents.content as smallContent')
+            ->leftJoin('home_images', 'home_images.home_content_id', '=', 'home_contents.id')
+            ->leftJoin('images', 'images.id', '=', 'home_images.image_id')
+            ->select('home_contents.*', 'home_categories.name as home_category_name', 'home_categories.id as home_category_id', 
+                    'images.id as home_image_id', 'images.image as home_image_url')
             ->get();
-    dd($items); exit;
-        return view('home2', ['items' => $items]);
+        $groupByItems = array();
+        foreach ($items as $item) {
+            $groupByItems[$item->id][] = $item;
+        }
+        $homeContents = DB::table('home_content_types')
+            ->join('home_contents', 'home_content_types.home_content_id', '=', 'home_contents.id')
+            ->join('home_categories', 'home_content_types.home_category_id', '=', 'home_categories.id')
+            ->select('home_contents.*', 'home_categories.id as home_category_id', 'home_categories.name as home_category_name')->get();
+        //dd($homeContents);
+        $smallItems = DB::table('home_small_contents')
+                ->leftJoin('small_content_images', 'small_content_images.home_small_content_id', '=', 'home_small_contents.id')
+                ->leftJoin('images', 'small_content_images.image_id', '=', 'images.id')
+                ->get();
+        $groupBySmallItems = array();
+        foreach ($smallItems as $smallItem) {
+            $groupBySmallItems[$smallItem->home_content_id][] = $smallItem;
+        }
+        return view('home2', ['homeContents' => $homeContents, 'groupBySmallItems' => $groupBySmallItems,'groupByItems'=> $groupByItems]);
+        //return view('homeContent.index', ['homeContents' => $homeContents, 'groupBySmallItems' => $groupBySmallItems,'groupByItems'=> $groupByItems]);
     }
 
     /**
@@ -101,7 +117,7 @@ class HomeContentController extends Controller
                 foreach ($files as $file) {
                     //save multiple images uploaded.
                     $imageId = (new ImageController)->saveImage($file);
-                    if($imageId != FALSE) {
+                    if($imageId != false) {
                         $homeImage = new HomeImage;                 //save homeimage with content_id and image_id
                         $homeImage->home_content_id = $homeContent->id;
                         $homeImage->image_id = $imageId;
@@ -116,21 +132,21 @@ class HomeContentController extends Controller
                 $smallImages = $request->file('small_img');                         //get list small_image
                 $smallContents = $request->input('small_content');                  //get list small_content
                 foreach ($smallContentTitles as $key => $value) {
-                    $smallContent = new SmallContent;
-                    $smallContent->title = $value;
-                    $smallContent->content = $smallContents[$key];
-                    if($smallContent->save()) {                     //save each small_content
+                    $homeSmallContent = new HomeSmallContent;
+                    $homeSmallContent->title = $value;
+                    $homeSmallContent->content = $smallContents[$key];
+                    $homeSmallContent->home_content_id = $homeContent->id;
+                    if($homeSmallContent->save()) {                     //save each small_content
                         if($smallImages[$key] != null) {
                             $imageId = (new ImageController)->saveImage($smallImages[$key]);
-                            if($imageId != FALSE) {
+                            if($imageId != false) {
                                   //Save image uploaded.
                                 $smallContentImage = new SmallContentImage;
-                                $smallContentImage->small_content_id = $smallContent->id;
+                                $smallContentImage->home_small_content_id = $homeSmallContent->id;
                                 $smallContentImage->image_id = $imageId;
                                 $smallContentImage->save();             //Save small_content and image on SmallContentImage Table
                             }
                         }
-                        $this->homeSmallContent($homeContent->id, $smallContent->id);  // Save data to HomeSmallContent table
                     }
                     
                 }
@@ -160,7 +176,8 @@ class HomeContentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $homeContent = HomeContent::findOrFail($id);
+        return view('homeContent.edit', ['$homeContent' => $homeContent]);
     }
 
     /**

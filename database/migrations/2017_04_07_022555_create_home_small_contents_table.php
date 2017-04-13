@@ -14,10 +14,10 @@ class CreateHomeSmallContentsTable extends Migration
     {
         Schema::create('home_small_contents', function(Blueprint $table) {
             $table->increments('id');
+            $table->string('title', 100);
+            $table->string('content', 500);
             $table->integer('home_content_id')->unsigned();
-            $table->integer('small_content_id')->unsigned();
             $table->foreign('home_content_id')->references('id')->on('home_contents')->onDelete('cascade');
-            $table->foreign('small_content_id')->references('id')->on('small_contents')->onDelete('cascade');
             $table->timestamps();
         });
     }

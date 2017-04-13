@@ -101,8 +101,8 @@ body {
             padding-bottom: 10px;
             border-bottom: 1px solid #002E5B; }
           body #wrapper #content #news-page #page-container .news-page-item .news-page-item-image, body #wrapper #content #news-page #footer .footer-wrapper .news-page-item .news-page-item-image, body #wrapper #footer #content #news-page .footer-wrapper .news-page-item .news-page-item-image {
-            width: 100%;
-            height: auto;
+            width: 200px;
+            height: 120px;
             padding-top: 10px; }
         body #wrapper #content #news-page #page-container #big-title, body #wrapper #content #news-page #footer .footer-wrapper #big-title, body #wrapper #footer #content #news-page .footer-wrapper #big-title, body #wrapper #content #news-page #page-container #news-page-big-title, body #wrapper #content #news-page #footer .footer-wrapper #news-page-big-title, body #wrapper #footer #content #news-page .footer-wrapper #news-page-big-title, body #wrapper #content #news-page #about-us #page-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #news-page #page-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #page-container .about-us-content #news-page #footer .footer-wrapper #about-us-big-title, body #wrapper #footer #content #about-us #page-container .about-us-content #news-page .footer-wrapper #about-us-big-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-content #news-page #page-container #about-us-big-title, body #wrapper #content #news-page #about-us #footer .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #content #about-us #news-page #footer .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-content #news-page #page-container #about-us-big-title, body #wrapper #content #news-page #footer #content #about-us .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #news-page #about-us .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #about-us #news-page .footer-wrapper .about-us-content #about-us-big-title {
           padding-top: 30px;
@@ -162,7 +162,8 @@ body {
         body #wrapper #content #workplace #page-container .workplace-content .acc ul li:hover, body #wrapper #content #workplace #footer .footer-wrapper .workplace-content .acc ul li:hover, body #wrapper #footer #content #workplace .footer-wrapper .workplace-content .acc ul li:hover {
           width: 50%; }
         body #wrapper #content #workplace #page-container .workplace-content img.workplace-image, body #wrapper #content #workplace #footer .footer-wrapper .workplace-content img.workplace-image, body #wrapper #footer #content #workplace .footer-wrapper .workplace-content img.workplace-image {
-          width: 590px; }
+          width: 590px;
+          height: 250px; }
       body #wrapper #content #customer {
         padding: 100px 0 115px;
         position: relative;
@@ -201,8 +202,8 @@ body {
             transform: scale(1.1);
             cursor: pointer; }
           body #wrapper #content #customer #page-container .customer-content img.customer-image, body #wrapper #content #customer #footer .footer-wrapper .customer-content img.customer-image, body #wrapper #footer #content #customer .footer-wrapper .customer-content img.customer-image {
-            width: 100%;
-            height: auto; }
+            width: 370px;
+            height: 170px; }
 @-moz-keyframes marquee {
   0% {
     transform: translateX(0); }
@@ -344,6 +345,21 @@ body {
             color: #fff;
             width: 80%;
             float: right; }
+      body #wrapper #content #home-list-items {
+        padding-top: 100px;
+        min-height: 2600px;
+        position: relative;
+        background-color: #000000; }
+        body #wrapper #content #home-list-items #page-container, body #wrapper #content #home-list-items #footer .footer-wrapper, body #wrapper #footer #content #home-list-items .footer-wrapper {
+          padding-bottom: 100px;
+          min-height: 100%; }
+          body #wrapper #content #home-list-items #page-container #item, body #wrapper #content #home-list-items #footer .footer-wrapper #item, body #wrapper #footer #content #home-list-items .footer-wrapper #item {
+            background-color: #fff;
+            color: #000000;
+            text-align: center; }
+          body #wrapper #content #home-list-items #page-container img, body #wrapper #content #home-list-items #footer .footer-wrapper img, body #wrapper #footer #content #home-list-items .footer-wrapper img {
+            width: 50px;
+            height: auto; }
       body #wrapper #content #post-create {
         position: relative;
         padding-top: 100px;
@@ -351,7 +367,7 @@ body {
     body #wrapper #footer {
       background: #002E5B;
       width: 100%;
-      position: absolute;
+      position: relative;
       right: 0;
       bottom: 0;
       left: 0;
@@ -400,6 +416,9 @@ body {
     font-family: "Open Sans",Arial,sans-serif;
     padding-top: 10px;
     padding-bottom: 10px; }
+
+.admin .button-edit {
+  float: right; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #header .nav-header .container .navbar-header {

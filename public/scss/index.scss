@@ -140,8 +140,8 @@ body {
                             border-bottom: 1px solid #002E5B;
                         }
                         .news-page-item-image {
-                            width: 100%;
-                            height: auto;
+                            width: 200px;
+                            height: 120px;
                             padding-top: 10px;
                         }
                         .news-page-item-content {
@@ -242,6 +242,7 @@ body {
                         }
                         img.workplace-image {
                             width:590px;
+                            height: 250px;
                         }
                     }
                 }
@@ -299,8 +300,8 @@ body {
                             cursor: pointer;
                         }
                         img.customer-image {
-                            width: 100%;
-                            height: auto;
+                            width: 370px;
+                            height: 170px;
                         }
                         @-moz-keyframes marquee {
                             0% {
@@ -491,6 +492,27 @@ body {
                     
                 }
             }
+            #home-list-items {
+                padding-top: 100px;
+                min-height: 2600px;
+                position: relative;
+                background-color: #000000;
+                #page-container {
+                    padding-bottom: 100px;
+                    min-height: 100%;
+                    #item {
+                        background-color: #fff;
+                        color: #000000;
+                        text-align: center;
+                    }
+                    img {
+                        width: 50px;
+                        height: auto;
+                    }
+                    
+                }
+                
+            }
             #post-create {
                 position: relative;
                 padding-top: 100px;
@@ -500,7 +522,7 @@ body {
         #footer {
             background: #002E5B;
             width:100%;
-            position: absolute;
+            position: relative;
             right: 0;
             bottom: 0;
             left: 0;
@@ -562,6 +584,11 @@ body {
         font-family: "Open Sans",Arial,sans-serif;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+ }
+ .admin {
+    .button-edit {
+         float: right;
     }
  }
  @media screen and (min-width: 320px) and (max-width: 767px) {
