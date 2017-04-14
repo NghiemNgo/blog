@@ -10,9 +10,9 @@
         </div>
         <div id="page-container">
             <p id='top-page-small-title'>{{$homeContent->small_title}}</p>
-            <h2 id='big-title'>{{$homeContent->big_title}}</h2>
-            <p id='top-page-content'>{{$homeContent->content}}</p>
-            <p id='slogan'>{{$homeContent->slogan}}</p>
+            <h2 id='big-title'>{!! nl2br(e($homeContent->big_title)) !!}</h2>
+            <p id='top-page-content'>{!! nl2br(e($homeContent->content)) !!}</p>
+            <p id='slogan'>{!! nl2br(e($homeContent->slogan)) !!}</p>
         </div>
     </div>
     @elseif($homeContent->home_category_name == 'products-page')
@@ -28,8 +28,8 @@
                     
                     <div class="col-md-6">
                         <div class="products-page-introduce">
-                            <h2 id='big-title'>{{$homeContent->big_title}}</h2>
-                            <p id='products-page-content'>{{$homeContent->content}}</p>
+                            <h2 id='big-title'>{!! nl2br(e($homeContent->big_title)) !!}</h2>
+                            <p id='products-page-content'>{!! nl2br(e($homeContent->content)) !!}</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -95,7 +95,7 @@
             <div class="news-page-header">
                 <p id='news-page-small-title'>{{$homeContent->small_title}}</p>
             </div>
-            <h2 id='news-page-big-title'>{{$homeContent->big_title}}</h2>
+            <h2 id='news-page-big-title'>{!! nl2br(e($homeContent->big_title)) !!}</h2>
             <div class="row">
             @if(isset($groupBySmallItems[$homeContent->id]))
                 @foreach($groupBySmallItems[$homeContent->id] as $groupBySmallItem)
@@ -126,7 +126,7 @@
                 <p id='about-us-small-title'>{{$homeContent->small_title}}</p>
             </div>
             <div class="about-us-content">
-                <h2 id='about-us-big-title'>{{$homeContent->big_title}}</h2>
+                <h2 id='about-us-big-title'>{!! nl2br(e($homeContent->big_title)) !!}</h2>
                 <p>{{$homeContent->content}}</p></div>
             
         </div>
@@ -142,7 +142,7 @@
                 <p id="recruit-small-title">{{$homeContent->small_title}}</p>
             </div>
             <div class="recruit-content">
-                <p>{{$homeContent->content}}</p>
+                <p>{!! nl2br(e($homeContent->content)) !!}</p>
             </div>
             <button type="button" class="btn btn-secondary">TUYỂN DỤNG</button>
         </div>

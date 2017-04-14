@@ -9,9 +9,9 @@
         </div>
         <div id="page-container">
             <p id='top-page-small-title'><?php echo e($homeContent->small_title); ?></p>
-            <h2 id='big-title'><?php echo e($homeContent->big_title); ?></h2>
-            <p id='top-page-content'><?php echo e($homeContent->content); ?></p>
-            <p id='slogan'><?php echo e($homeContent->slogan); ?></p>
+            <h2 id='big-title'><?php echo nl2br(e($homeContent->big_title)); ?></h2>
+            <p id='top-page-content'><?php echo nl2br(e($homeContent->content)); ?></p>
+            <p id='slogan'><?php echo nl2br(e($homeContent->slogan)); ?></p>
         </div>
     </div>
     <?php elseif($homeContent->home_category_name == 'products-page'): ?>
@@ -27,8 +27,8 @@
                     
                     <div class="col-md-6">
                         <div class="products-page-introduce">
-                            <h2 id='big-title'><?php echo e($homeContent->big_title); ?></h2>
-                            <p id='products-page-content'><?php echo e($homeContent->content); ?></p>
+                            <h2 id='big-title'><?php echo nl2br(e($homeContent->big_title)); ?></h2>
+                            <p id='products-page-content'><?php echo nl2br(e($homeContent->content)); ?></p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -94,7 +94,7 @@
             <div class="news-page-header">
                 <p id='news-page-small-title'><?php echo e($homeContent->small_title); ?></p>
             </div>
-            <h2 id='news-page-big-title'><?php echo e($homeContent->big_title); ?></h2>
+            <h2 id='news-page-big-title'><?php echo nl2br(e($homeContent->big_title)); ?></h2>
             <div class="row">
             <?php if(isset($groupBySmallItems[$homeContent->id])): ?>
                 <?php foreach($groupBySmallItems[$homeContent->id] as $groupBySmallItem): ?>
@@ -125,7 +125,7 @@
                 <p id='about-us-small-title'><?php echo e($homeContent->small_title); ?></p>
             </div>
             <div class="about-us-content">
-                <h2 id='about-us-big-title'><?php echo e($homeContent->big_title); ?></h2>
+                <h2 id='about-us-big-title'><?php echo nl2br(e($homeContent->big_title)); ?></h2>
                 <p><?php echo e($homeContent->content); ?></p></div>
             
         </div>
@@ -141,7 +141,7 @@
                 <p id="recruit-small-title"><?php echo e($homeContent->small_title); ?></p>
             </div>
             <div class="recruit-content">
-                <p><?php echo e($homeContent->content); ?></p>
+                <p><?php echo nl2br(e($homeContent->content)); ?></p>
             </div>
             <button type="button" class="btn btn-secondary">TUYỂN DỤNG</button>
         </div>

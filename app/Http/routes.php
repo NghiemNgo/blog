@@ -12,9 +12,6 @@
 */
 
 //Route::auth();
-Route::get('home2', function () {
-    return view('home2');
-});
 Route::get('test', function () {
     return view('test');
 });
@@ -38,7 +35,7 @@ Route::get('home/items', 'HomeCategoryController@index')->name('home.items');
 Route::post('home/store', 'HomeContentController@store')->name('home.create');
 
 //homeContent
-Route::get('homeContent', 'HomeContentController@index')->name('home.index');
+Route::get('home2', 'HomeContentController@index')->name('home.index');
 Route::get('home/items/{id}/edit', 'HomeContentController@edit')->name('home.editItem');
 Route::post('home/items/{id}/update', 'HomeContentController@update')->name('home.updateItem');
-Route::get('home/items/{id}/delete', 'HomeContentController@delete')->name('home.deleteItem');
+Route::get('home/items/{id}/delete', 'HomeContentController@destroy')->name('home.deleteItem');

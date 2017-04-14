@@ -602,6 +602,13 @@ body {
     padding-top: 100px;
     position: relative;
     padding-bottom: 20px;
+    #big_img {
+        width: 200px;
+        height: 100px;
+    }
+    #small_img {
+        @extend #big_img;
+    }
  }
  @media screen and (min-width: 320px) and (max-width: 767px) {
     #header {

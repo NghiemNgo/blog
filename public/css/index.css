@@ -429,6 +429,9 @@ body {
   padding-top: 100px;
   position: relative;
   padding-bottom: 20px; }
+  #pageContent #big_img, #pageContent #small_img {
+    width: 200px;
+    height: 100px; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #header .nav-header .container .navbar-header {

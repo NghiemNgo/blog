@@ -44,7 +44,7 @@
 
                         <!-- Branding Image -->
                         <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                            <image id="logo" src="../images/logo-rikkei.png"/>
+                            <image id="logo" src="/images/logo-rikkei.png"/>
                         </a>
                     </div>
 
@@ -95,7 +95,7 @@
                     <div class="col-md-4">
                         <div class="logo-footer">
                         <a class="container-logo" href="<?php echo e(url('/')); ?>">
-                            <image id="logo-footer" src="../images/logo-rikkei.png"/>
+                            <image id="logo-footer" src="/images/logo-rikkei.png"/>
                         </a>
                         </div>
                         <div class="footer-content1">
