@@ -26,19 +26,10 @@
     </script>
 </head>
 <body>
-    <label class="wrapper" for="states">This label is stacked above the select</label>
-    <div class="button dropdown"> 
-      <select id="colorselector">
-         <option value="red">Red</option>
-         <option value="yellow">Yellow</option>
-         <option value="blue">Blue</option>
-      </select>
-    </div>
-
-    <div class="output">
-      <div id="red" class="colors red">  “Good artists copy, great artists steal” Pablo Picasso</div>
-      <div id="yellow" class="colors yellow"> “Art is the lie that enables us to realize the truth” Pablo Picasso</div>
-      <div id="blue" class="colors blue"> “If I don't have red, I use blue” Pablo Picasso</div>
-    </div>
+<div class="background-image"></div>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam erat in ante malesuada, facilisis semper nulla semper. Phasellus sapien neque, faucibus in malesuada quis, lacinia et libero. Sed sed turpis tellus. Etiam ac aliquam tortor, eleifend rhoncus metus. Ut turpis massa, sollicitudin sit amet molestie a, posuere sit amet nisl. Mauris tincidunt cursus posuere. Nam commodo libero quis lacus sodales, nec feugiat ante posuere. Donec pulvinar auctor commodo. Donec egestas diam ut mi adipiscing, quis lacinia mauris condimentum. Quisque quis odio venenatis, venenatis nisi a, vehicula ipsum. Etiam at nisl eu felis vulputate porta.</p>
+  <p>Fusce ut placerat eros. Aliquam consequat in augue sed convallis. Donec orci urna, tincidunt vel dui at, elementum semper dolor. Donec tincidunt risus sed magna dictum, quis luctus metus volutpat. Donec accumsan et nunc vulputate accumsan. Vestibulum tempor, erat in mattis fringilla, elit urna ornare nunc, vel pretium elit sem quis orci. Vivamus condimentum dictum tempor. Nam at est ante. Sed lobortis et lorem in sagittis. In suscipit in est et vehicula.</p>
+</div>
 </body>
 </html>

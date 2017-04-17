@@ -1,39 +1,5 @@
 @extends('layouts.app2')
-<script>
-var i=0;
-function add(){
-    var value = document.getElementById('inputCategories').value;
-    if (value!='') 
-    {   
-        i++;  
-        var title   =document.getElementById('inputCategories').value;
-        var node = document.createElement('div');        
-        node.innerHTML = '<input type="checkbox" id="checkbox' + i + '" name="listCategories[' + i + ']" value=' + title + '><label for="check' + i + '">'+ title +'</label>';       
-        document.getElementById('test').appendChild(node);
-        document.getElementById('inputCategories').value="";
-    }
-    
-}
 
-//function  ajaxExample(){
-//    var _token = $('input[name="_token"]').val();
-//    var title = document.getElementById('title').value;
-//    var salary = document.getElementById('salary').value;
-//    var description = document.getElementById('description').value;
-//    var requires = document.getElementById('requires').value;
-//    $.ajax({
-//           type: "POST",
-//           url: "{{ URL::route('post.ajax') }}",
-//           data: { _token : _token, title: title, salary: salary, description: description, requires: requires },
-//           success: function(data)
-//           {
-//               alert("Success"); 
-//           }
-//    });
-//    return false; 
-//}
-
-</script>
 @section('content')
 <div id="content">
     <div id="post-create">

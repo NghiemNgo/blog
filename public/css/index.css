@@ -4,8 +4,15 @@ body {
   height: 100%;
   font-size: 14px;
   font-family: "Open Sans",Arial,sans-serif;
-  color: #6E6E6E; }
+  color: #fff; }
   body #wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    margin: 0;
     min-height: 100%;
     position: relative; }
     body #wrapper #header {
@@ -19,8 +26,7 @@ body {
       -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
       box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
       transition: all 0.2s ease-in-out;
-      height: 70px;
-      background-color: #000000; }
+      height: 70px; }
       body #wrapper #header .nav-header .container .navbar-header {
         float: left;
         width: 25%;
@@ -37,7 +43,6 @@ body {
         float: right;
         padding-top: 10px; }
     body #wrapper #content {
-      background-color: #41A9DA;
       min-height: 100% !important;
       height: auto;
       magin: 0 auto; }
@@ -401,19 +406,26 @@ body {
         width: 50%;
         height: auto; }
 
+.scrolled {
+  background-color: #002E5B !important;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); }
+
 #page-container, body #wrapper #footer .footer-wrapper {
-  width: 80%;
+  width: 90%;
   position: relative;
   margin: 0 auto;
   padding-bottom: 20px; }
   #page-container #big-title, body #wrapper #footer .footer-wrapper #big-title, body #wrapper #content #news-page #page-container #news-page-big-title, body #wrapper #content #news-page #footer .footer-wrapper #news-page-big-title, body #wrapper #footer #content #news-page .footer-wrapper #news-page-big-title, body #wrapper #content #about-us #page-container .about-us-content #about-us-big-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-content #about-us-big-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-content #about-us-big-title {
     font-size: 36px;
-    word-wrap: break-word; }
+    word-wrap: break-word;
+    font-weight: 700; }
   #page-container #small-title, body #wrapper #footer .footer-wrapper #small-title, body #wrapper #content #products-page #page-container #products-page-small-title, body #wrapper #content #products-page #footer .footer-wrapper #products-page-small-title, body #wrapper #footer #content #products-page .footer-wrapper #products-page-small-title, body #wrapper #content #news-page #page-container .news-page-header #news-page-small-title, body #wrapper #content #news-page #footer .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #footer #content #news-page .footer-wrapper .news-page-header #news-page-small-title, body #wrapper #content #about-us #page-container .about-us-header #about-us-small-title, body #wrapper #content #about-us #footer .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #footer #content #about-us .footer-wrapper .about-us-header #about-us-small-title, body #wrapper #content #recruit #page-container .recruit-header #recruit-small-title, body #wrapper #content #recruit #footer .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #footer #content #recruit .footer-wrapper .recruit-header #recruit-small-title, body #wrapper #content #workplace #page-container .workplace-header #workplace-small-title, body #wrapper #content #workplace #footer .footer-wrapper .workplace-header #workplace-small-title, body #wrapper #footer #content #workplace .footer-wrapper .workplace-header #workplace-small-title, body #wrapper #content #customer #page-container .customer-header #customer-small-title, body #wrapper #content #customer #footer .footer-wrapper .customer-header #customer-small-title, body #wrapper #footer #content #customer .footer-wrapper .customer-header #customer-small-title {
     font-size: 14px;
     height: 35px;
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 10px;
     font-weight: 700;
     line-height: 28px; }
   #page-container #item-content, body #wrapper #footer .footer-wrapper #item-content, body #wrapper #content #products-page #page-container .products-page-introduce #products-page-content, body #wrapper #content #products-page #footer .footer-wrapper .products-page-introduce #products-page-content, body #wrapper #footer #content #products-page .footer-wrapper .products-page-introduce #products-page-content, body #wrapper #content #news-page #page-container .news-page-item .news-page-item-content, body #wrapper #content #news-page #footer .footer-wrapper .news-page-item .news-page-item-content, body #wrapper #footer #content #news-page .footer-wrapper .news-page-item .news-page-item-content {
@@ -421,6 +433,21 @@ body {
     font-family: "Open Sans",Arial,sans-serif;
     padding-top: 10px;
     padding-bottom: 10px; }
+
+.top-page-container {
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px); }
 
 .admin .button-edit {
   float: right; }
@@ -432,6 +459,19 @@ body {
   #pageContent #big_img, #pageContent #small_img {
     width: 200px;
     height: 100px; }
+
+.panel.panel-default {
+  margin-top: 100px;
+  min-height: 100%; }
+  .panel.panel-default .panel-body {
+    color: #000000;
+    font-size: 14px;
+    font-family: "Open Sans",Arial,sans-serif;
+    height: 100px; }
+    .panel.panel-default .panel-body .img-responsive {
+      margin-left: 30px;
+      width: 80px;
+      height: auto; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #header .nav-header .container .navbar-header {

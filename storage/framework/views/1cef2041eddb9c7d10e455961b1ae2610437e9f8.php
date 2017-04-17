@@ -1,3 +1,19 @@
+<script>
+var i=0;
+function add(){
+    var value = document.getElementById('inputCategories').value;
+    if (value!='') 
+    {   
+        i++;  
+        var title   =document.getElementById('inputCategories').value;
+        var node = document.createElement('div');        
+        node.innerHTML = '<input type="checkbox" id="checkbox' + i + '" name="listCategories[]" value=' + title + '><label for="check' + i + '">'+ title +'</label>';       
+        document.getElementById('test').appendChild(node);
+        document.getElementById('inputCategories').value="";
+    }
+    
+}
+</script>
 <?php $__env->startSection('content'); ?>
 <div class="container">
     <div class="row">
@@ -50,16 +66,40 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-
                         <div class="form-group<?php echo e($errors->has('requires') ? ' has-error' : ''); ?>">
                             <label for="requires" class="col-md-2 control-label">Requires</label>
-
                             <div class="col-md-8">
                                 <textarea id="requires" class="form-control" rows="5" cols="90" name="requires" ><?php echo e($post->description); ?></textarea>
 
                                 <?php if($errors->has('requires')): ?>
                                     <span class="help-block">
                                         <strong><?php echo e($errors->first('requires')); ?></strong>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="form-group<?php echo e($errors->has('categories') ? ' has-error' : ''); ?>">
+                            <label for="categories" class="col-md-2 control-label">Categories</label>
+
+                            <div class="col-md-8">
+                                <div id="container">
+                                    <input id="inputCategories" type="text" list="listCategories" >
+                                    <input value="add" type="button"  onClick="add()">
+                                    <datalist id="listCategories">
+                                        <?php foreach($categories as $category): ?>
+                                        <option><?php echo e($category->name); ?></option>
+                                        <?php endforeach; ?>
+                                </datalist>
+                                </div>
+                                <div id="test">
+                                    <?php foreach($post->categories as $category): ?>
+                                    <div><input type="checkbox" id="checkbox" name="listCategories[]" value="<?php echo e($category->name); ?>" checked="true"><label><?php echo e($category->name); ?></label></div>
+                                    <?php endforeach; ?>
+                                </div>
+
+                                <?php if($errors->has('categories')): ?>
+                                    <span class="help-block">
+                                        <strong><?php echo e($errors->first('categories')); ?></strong>
                                     </span>
                                 <?php endif; ?>
                             </div>

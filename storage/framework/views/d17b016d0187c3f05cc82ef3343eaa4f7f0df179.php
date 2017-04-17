@@ -14,10 +14,15 @@
                     <div><p><?php echo nl2br($post->description); ?></p></div>
                     <div><p><strong><h4> Requires: </h4></strong></p>
                         <p><?php echo nl2br($post->requires); ?></p>
-                        <a href="<?php echo e(route('post.edit', $post->id)); ?>">edit</a>
-                        <a href="<?php echo e(route('post.delete', $post->id)); ?>">delete</a>
-                        <a href="<?php echo e(route('apply', $post->id)); ?>">Apply now!</a> 
                     </div>
+                    <div>
+                        <?php foreach($post->categories as $category): ?>
+                        <a href="#">#<?php echo e($category->name); ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                    <a href="<?php echo e(route('post.edit', $post->id)); ?>">edit</a>
+                    <a href="<?php echo e(route('post.delete', $post->id)); ?>">delete</a>
+                    <a href="<?php echo e(route('apply', $post->id)); ?>">Apply now!</a> 
                 </div>
             </div>
         </div>

@@ -1,32 +1,11 @@
-//$(document).ready(function(){
-//    $(window).bind('scroll', function() {
-//      var distance = 300;
-//      if ($(window).scrollTop() > distance) {
-//        header.style.backgroundColor = '#002E5B';
-//      }
-//      else {
-//        header.style.backgroundColor = 'transparent';
-//      }
-//      if ($(window).scrollTop() > 700) {
-//          $('body').addClass('scrolled');
-//      } else {
-//          $('body').removeClass('scrolled');
-//      }
-//    });
-//    $('.section-third-page').click(function () {
-//    $('iframe.maps').css("pointer-events", "auto");
-//    });
-//    $( ".section-third-page" ).mouseleave(function() {
-//      $('iframe.maps').css("pointer-events", "none"); 
-//    });
-//    $(function() {
-//        $('#colorselector').change(function(){
-//            $('.colors').hide();
-//            $('#' + $(this).val()).show();
-//        });
-//    });
-//});
-
+//change color header while scrolled
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 50) {
+        $("#header").addClass("scrolled")
+    } else {
+       $("#header").removeClass("scrolled");
+    }
+});
 //preview image before uploaded
 function readURL(input) {
     if (input.files && input.files[0]) {

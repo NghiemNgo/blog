@@ -9,4 +9,5 @@ class Tag extends Model
     protected $fillable = [
         'category_id', 'post_id'
     ];
+
 }

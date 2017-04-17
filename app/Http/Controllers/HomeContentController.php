@@ -95,7 +95,7 @@ class HomeContentController extends Controller
                         ->withErrors(array('error'=>'Image must be required and type of image are jpeg, jpg, png and max file 2m'))
                         ->withInput();
         }
-            //dd($request->file('small_img')); exit;
+        exit;
         $homeContent = new HomeContent;
         if($request->input('small_title')) { 
             $homeContent->small_title = $request->input('small_title');

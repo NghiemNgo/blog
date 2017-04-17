@@ -13,6 +13,7 @@ use App\Model\Category;
 use App\Model\Tag;
 use Validator;
 use DB;
+use Illuminate\Support\Facades\Redis;
 
 /**
  * Description of PostController
@@ -78,40 +79,58 @@ class PostController extends Controller{
         $post->salary = $request->input('salary');
         $post->save();
     }
-
+    /**
+     * step 1: check the post exists in cache ?
+     * step 2: if it exist in cache, get post from cache else get post from db and set it to cache
+     * step 3: return view with post data
+     */
     public function show($id)
-    {
-        $post = Post::findOrFail($id);
-        $tags = DB::table('tags')->select('category_id')->where('post_id', $id);
+    {   
+        if(Redis::exists("post".$id)) {
+            $post = json_decode(Redis::get("post".$id));
+            return view('posts.show', ['post' => $post]);
+        }
+        $post = Post::find($id);
+        $tags = $post->categories()->get();
+        $post->categories = $tags;
+        Redis::set("post".$id, json_encode($post));
         return view('posts.show', ['post' => $post]);
     }
     
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
-        return view('posts.edit', ['post' => $post]);
+        $post = json_decode(Redis::get("post".$id));
+        $categories = Category::all();
+        return view('posts.edit', ['post' => $post, 'categories' => $categories]);
     }
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|unique:posts|max:255|min:7',
+            'title' => 'required|max:255|min:7',
             'description' => 'required',
             'requires' => 'required',
             'salary' => 'required|numeric'
         ]);
-
         if ($validator->fails()) {
             return redirect()->route('post.edit', ['id' => $id])
                         ->withErrors($validator)
                         ->withInput();
         }
-        
+        $listCategories = $request->input('listCategories');
         $post = Post::findOrFail($id);
         $post->title = $request->input('title');
         $post->description = $request->input('description');
         $post->requires = $request->input('requires');
         $post->salary = $request->input('salary');
-        $post->save();
+        if($post->save()) {
+            Tag::where("post_id", $id)->delete();
+            $this->saveNewCategories($listCategories);
+            $this->saveTags($listCategories, $post->id);
+            $tags = $post->categories()->get();
+            $post->categories = $tags;
+            Redis::del("post".$id);
+            Redis::set("post".$id, json_encode($post));
+        }
         return redirect()->route('post.show', ['id' => $id]);
     }
     
@@ -119,6 +138,7 @@ class PostController extends Controller{
     {
         $post = Post::findOrFail($id);
         $post->delete();
+        Redis::del("post".$id);
         return redirect()->route('post.index');
     }
     

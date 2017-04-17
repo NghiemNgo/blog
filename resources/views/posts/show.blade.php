@@ -16,10 +16,15 @@
                     <div><p><?php echo nl2br($post->description); ?></p></div>
                     <div><p><strong><h4> Requires: </h4></strong></p>
                         <p><?php echo nl2br($post->requires); ?></p>
-                        <a href="{{ route('post.edit', $post->id) }}">edit</a>
-                        <a href="{{ route('post.delete', $post->id) }}">delete</a>
-                        <a href="{{ route('apply', $post->id) }}">Apply now!</a> 
                     </div>
+                    <div>
+                        @foreach($post->categories as $category)
+                        <a href="#">#{{$category->name}}</a>
+                        @endforeach
+                    </div>
+                    <a href="{{ route('post.edit', $post->id) }}">edit</a>
+                    <a href="{{ route('post.delete', $post->id) }}">delete</a>
+                    <a href="{{ route('apply', $post->id) }}">Apply now!</a> 
                 </div>
             </div>
         </div>
