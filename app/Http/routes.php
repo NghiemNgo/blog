@@ -11,7 +11,7 @@
 |
 */
 
-//Route::auth();
+Route::auth();
 Route::get('test', function () {
     return view('test');
 });
@@ -39,3 +39,6 @@ Route::get('home2', 'HomeContentController@index')->name('home.index');
 Route::get('home/items/{id}/edit', 'HomeContentController@edit')->name('home.editItem');
 Route::post('home/items/{id}/update', 'HomeContentController@update')->name('home.updateItem');
 Route::get('home/items/{id}/delete', 'HomeContentController@destroy')->name('home.deleteItem');
+
+//UserAPI
+Route::get('user/{id}', 'UserApiController@get')->name('user.get');

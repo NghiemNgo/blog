@@ -128,7 +128,6 @@ class PostController extends Controller{
             $this->saveTags($listCategories, $post->id);
             $tags = $post->categories()->get();
             $post->categories = $tags;
-            Redis::del("post".$id);
             Redis::set("post".$id, json_encode($post));
         }
         return redirect()->route('post.show', ['id' => $id]);
