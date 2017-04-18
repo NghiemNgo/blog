@@ -123,16 +123,14 @@
             fld.focus();        
             return false; 
         }
-        
         if(fileSize > 3145728){
             $('#validateSizeCV').show();
             fld.form.reset();
             fld.focus();        
             return false; 
         }
-        
         return true;
     }
 </script>
 
-<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layouts.app2', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

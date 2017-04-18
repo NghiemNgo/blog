@@ -49,12 +49,12 @@
         var fileSize = fld.files[0].size;
         $('#validateTypeCV').hide();
         $('#validateSizeCV').hide();
-//        if(!/(\.docx|\.doc|\.pdf|\.txt|\.xls|\.xlsx)$/i.test(fld.value)) {
-//            $('#validateTypeCV').show();
-//            fld.form.reset();
-//            fld.focus();        
-//            return false; 
-//        }
+        if(!/(\.docx|\.doc|\.pdf|\.txt|\.xls|\.xlsx)$/i.test(fld.value)) {
+            $('#validateTypeCV').show();
+            fld.form.reset();
+            fld.focus();        
+            return false; 
+        }
         if(fileSize > 3145728){
             $('#validateSizeCV').show();
             fld.form.reset();

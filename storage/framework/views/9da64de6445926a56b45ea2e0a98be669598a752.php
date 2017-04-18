@@ -58,7 +58,7 @@
                                 <a class="about-us" href="<?php echo e(url()->route('home')); ?>#our-products">PRODUCTS</a>
                             </li>
                             <li>
-                                <a class="about-us" href="">CAREERS</a>
+                                <a class="about-us" href="<?php echo e(url()->route('post.index')); ?>">CAREERS</a>
                             </li>
                             <li>
                                 <a class="about-us" href="">CONTACT US</a>
