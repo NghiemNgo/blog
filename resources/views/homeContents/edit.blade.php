@@ -1,4 +1,22 @@
 @extends('layouts.app2')
+<script type="text/javascript">
+    function validateFileExtension(fld) {
+        var fileSize = fld.files[0].size;
+        if(!/(\.jpg|\.png|\.jpeg)$/i.test(fld.value)) {
+            alert("file type must be jpeg, jpg, png");
+            fld.value = "";
+            fld.focus();        
+            return false; 
+        }
+        if(fileSize > 3145728){
+            alert("File size must under 3mb!");
+            fld.value= "";
+            fld.focus();        
+            return false; 
+        }
+        return true;
+    }
+</script>
 @section('content')
 <div id="page-content">
     <div id="pageContent">
@@ -60,7 +78,7 @@
                                 <label for="img" class="col-md-2 control-label">Image {{$i++}}</label>
                                 <div class="col-md-8">
                                     <input type="hidden" name="img[{{$image['id']}}][id]" value="{{$image['id']}}">
-                                    <input type='file' name="img[{{$image['id']}}][]" />
+                                    <input type='file' name="img[{{$image['id']}}][]" onchange="return validateFileExtension(this)" />
                                     <image id='big_img' src='/images/{{$image['image_url']}}'/>
                                     @if ($errors->has('slogan'))
                                         <span class="help-block">

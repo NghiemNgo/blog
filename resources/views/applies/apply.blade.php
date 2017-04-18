@@ -124,14 +124,12 @@
             fld.focus();        
             return false; 
         }
-        
         if(fileSize > 3145728){
             $('#validateSizeCV').show();
             fld.form.reset();
             fld.focus();        
             return false; 
         }
-        
         return true;
     }
 </script>

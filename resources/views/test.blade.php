@@ -26,10 +26,43 @@
     </script>
 </head>
 <body>
-<div class="background-image"></div>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam erat in ante malesuada, facilisis semper nulla semper. Phasellus sapien neque, faucibus in malesuada quis, lacinia et libero. Sed sed turpis tellus. Etiam ac aliquam tortor, eleifend rhoncus metus. Ut turpis massa, sollicitudin sit amet molestie a, posuere sit amet nisl. Mauris tincidunt cursus posuere. Nam commodo libero quis lacus sodales, nec feugiat ante posuere. Donec pulvinar auctor commodo. Donec egestas diam ut mi adipiscing, quis lacinia mauris condimentum. Quisque quis odio venenatis, venenatis nisi a, vehicula ipsum. Etiam at nisl eu felis vulputate porta.</p>
-  <p>Fusce ut placerat eros. Aliquam consequat in augue sed convallis. Donec orci urna, tincidunt vel dui at, elementum semper dolor. Donec tincidunt risus sed magna dictum, quis luctus metus volutpat. Donec accumsan et nunc vulputate accumsan. Vestibulum tempor, erat in mattis fringilla, elit urna ornare nunc, vel pretium elit sem quis orci. Vivamus condimentum dictum tempor. Nam at est ante. Sed lobortis et lorem in sagittis. In suscipit in est et vehicula.</p>
-</div>
+    <input id="upload_cv" type="file" name="upload_cv" onchange="return validateFileExtension(this)">
+    <span class="alert alert-error collapse" role="alert" id="validateTypeCV" style="color:red"><p>
+    <strong>
+        <span class="glyphicon glyphicon-exclamation-sign" style="font-size:15px;color:red"></span>
+    </strong>
+        You can only upload a file of the following file type(s): doc, docx, pdf, txt, xls, xlsx</p>
+    </span>
+                                <!--</div>-->
+                                <!--<div class="alert alert-error collapse" role="alert" id="validateSizeCV">-->
+    <span class="alert alert-error collapse" role="alert" id="validateSizeCV" style="color:red">
+        <p>
+        <strong>
+            <span class="glyphicon glyphicon-exclamation-sign" style="font-size:15px;color:red"></span>
+        </strong>
+            File size must under 3mb!
+        </p>
+    </span>
+    <script type="text/javascript">
+    function validateFileExtension(fld) {
+        //var uploadedFile = document.getElementById('upload_cv');
+        var fileSize = fld.files[0].size;
+        $('#validateTypeCV').hide();
+        $('#validateSizeCV').hide();
+//        if(!/(\.docx|\.doc|\.pdf|\.txt|\.xls|\.xlsx)$/i.test(fld.value)) {
+//            $('#validateTypeCV').show();
+//            fld.form.reset();
+//            fld.focus();        
+//            return false; 
+//        }
+        if(fileSize > 3145728){
+            $('#validateSizeCV').show();
+            fld.form.reset();
+            fld.focus();        
+            return false; 
+        }
+        return true;
+    }
+</script>
 </body>
 </html>

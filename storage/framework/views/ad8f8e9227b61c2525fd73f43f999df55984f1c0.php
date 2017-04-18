@@ -1,3 +1,21 @@
+<script type="text/javascript">
+    function validateFileExtension(fld) {
+        var fileSize = fld.files[0].size;
+        if(!/(\.jpg|\.png|\.jpeg)$/i.test(fld.value)) {
+            alert("file type must be jpeg, jpg, png");
+            fld.value = "";
+            fld.focus();        
+            return false; 
+        }
+        if(fileSize > 3145728){
+            alert("File size must under 3mb!");
+            fld.value= "";
+            fld.focus();        
+            return false; 
+        }
+        return true;
+    }
+</script>
 <?php $__env->startSection('content'); ?>
 <div id="page-content">
     <div id="pageContent">
@@ -60,7 +78,7 @@
                                 <label for="img" class="col-md-2 control-label">Image <?php echo e($i++); ?></label>
                                 <div class="col-md-8">
                                     <input type="hidden" name="img[<?php echo e($image['id']); ?>][id]" value="<?php echo e($image['id']); ?>">
-                                    <input type='file' name="img[<?php echo e($image['id']); ?>][]" />
+                                    <input type='file' name="img[<?php echo e($image['id']); ?>][]" onchange="return validateFileExtension(this)" />
                                     <image id='big_img' src='/images/<?php echo e($image['image_url']); ?>'/>
                                     <?php if($errors->has('slogan')): ?>
                                         <span class="help-block">
